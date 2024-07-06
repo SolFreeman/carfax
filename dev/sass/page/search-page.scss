@@ -21,7 +21,7 @@
 
         @include media('>=1140px') {
             max-width: 487px;
-            width: 100%; 
+            width: 100%;
         }
     }
 
@@ -184,6 +184,10 @@
 
         @include media('>=1140px') {
             max-width: 713px;
+        }
+
+        .title-other-vin {
+            text-align: left !important;
         }
 
         .title {
@@ -401,7 +405,7 @@
 
             @include media('>=tablet') {
                 font-size: 18px;
-                
+
             }
         }
     }
@@ -460,7 +464,7 @@
         width: 100%;
 
         @include media('>=tablet') {
-            width: auto;  
+            width: auto;
         }
 
         span {
@@ -468,8 +472,8 @@
             font-weight: 500;
             margin-left: 20px;
 
-            @include media('>=tablet') {
-                font-size: 32px;   
+            @include media('>=1200px') {
+                font-size: 32px;
             }
         }
     }
@@ -482,5 +486,90 @@
 
     .pay-list {
         display: flex;
+        margin: 0 0 40px;
+        justify-content: center;
+
+        @include media('>=tablet') {
+            justify-content: flex-start;
+        }
     }
+
+    .guarantee-list {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        gap: 16px;
+        align-items: center;
+
+        @include media('>=tablet') {
+            flex-direction: row;
+            font-size: 16px;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+
+            @include media('>=tablet') {
+                width: calc(100% / 3 - 12px);
+            }
+        }
+
+        .img-holder {
+            margin: 0 0 12px;
+        }
+    }
+
+    .check-other-box {
+        max-width: 1054px;
+        margin: 65px 0 40px;
+
+        @include media('>=tablet') {
+            margin: 0 auto 40px;
+        }
+
+        .title-other-vin {
+            text-align: center;
+            color: $color;
+            font-size: 24px;
+            margin-bottom: 16px;
+
+            @include media('>=tablet') {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .check-box {
+        border-radius: 16px;
+        display: flex;
+        box-shadow: 0 0 40px rgba(33, 116, 255, .25);
+        padding: 16px 12px;
+
+        @include media('>=tablet') {
+            padding: 24px;
+        }
+
+
+        .input_vin {
+            padding: 16px 24px;
+            width: 100%;
+            border-radius: 32px 0 0 32px;
+            border-right: 0;
+            margin-right: -21px;
+        }
+
+        .btn {
+            @include media('>=992px') {
+                padding: 13px 64px;
+            }
+        }
+    }
+
+    
 }
