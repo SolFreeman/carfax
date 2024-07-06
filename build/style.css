@@ -945,12 +945,12 @@ input:checked + label:before {
       display: flex;
       align-items: center; } }
   .nav__item {
-    margin-bottom: 18px;
+    margin: 0 0 18px !important;
     padding-left: 0; }
     @media (min-width: 992px) {
       .nav__item {
         padding: 10px 0 10px 33px;
-        margin: 0; } }
+        margin: 0 !important; } }
     .nav__item .nav-link {
       position: relative; }
     .nav__item.menu-item-has-children > a:before {
@@ -976,8 +976,7 @@ input:checked + label:before {
         color: #2174FF;
         transform: rotate(-180deg); } }
   .nav li {
-    position: relative;
-    margin: 0; }
+    position: relative; }
     .nav li:hover > a, .nav li.active > a {
       color: #242424;
       border-color: #2174FF; }

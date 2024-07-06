@@ -168,12 +168,12 @@
 	}
 
 	&__item {
-		margin-bottom: 18px;
+		margin:0 0 18px !important;
 		padding-left: 0;
 
 		@include media('>=992px') {
 			padding: 10px 0 10px 33px;
-			margin: 0;
+			margin: 0 !important;
 		}
 
 		.nav-link {
@@ -224,7 +224,6 @@
 
 	li {
 		position: relative;
-		margin: 0;
 
 		&:hover,
 		&.active {
