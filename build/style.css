@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Adventure Clues
 Theme URI: https://wordpress.org/themes/CustomTheme/
@@ -243,17 +242,40 @@ input[type="radio"] {
       vertical-align: middle;
       cursor: pointer;
       margin-right: 19px;
-      width: 26px;
-      height: 26px;
+      max-width: 24px;
+      width: 100%;
+      height: 24px;
       background-color: transparent;
       border: 1px solid #fff;
       border-radius: 2px; }
+    input[type="checkbox"] + label:after,
+    input[type="radio"] + label:after {
+      position: absolute;
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #2174FF;
+      border-radius: 50%;
+      left: calc(50% - 4px);
+      bottom: 32px;
+      opacity: 0; }
+      @media (min-width: 768px) {
+        input[type="checkbox"] + label:after,
+        input[type="radio"] + label:after {
+          width: 16px;
+          height: 16px;
+          bottom: auto;
+          left: 28px;
+          top: 35px; } }
 
 input[type="radio"] + label:before {
   border-radius: 50%; }
 
 input[type="checkbox"] + label:before {
   background-color: #fff; }
+
+input[type=radio]:checked + label:after {
+  opacity: 1; }
 
 input[type=radio]:checked + label:before {
   border-radius: 50%;
@@ -2007,13 +2029,16 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 64px; }
-    @media (min-width: 992px) {
+    @media (min-width: 1140px) {
       .report-area .two-col {
-        gap: 80;
+        gap: 80px;
         flex-direction: row; } }
   .report-area .info-col {
-    max-width: 487px;
     width: 100%; }
+    @media (min-width: 1140px) {
+      .report-area .info-col {
+        max-width: 487px;
+        width: 100%; } }
   .report-area .report-status {
     font-size: 24px;
     font-weight: 500;
@@ -2122,8 +2147,10 @@ h1 {
           background-color: transparent;
           background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8 14.5C9.38813 14.5 10.7333 14.0187 11.8064 13.1381C12.8794 12.2574 13.6139 11.032 13.8847 9.67054C14.1555 8.30908 13.9459 6.89584 13.2915 5.67162C12.6372 4.4474 11.5786 3.48794 10.2961 2.95672C9.01364 2.42551 7.58665 2.3554 6.25829 2.75836C4.92993 3.16131 3.78239 4.01239 3.01118 5.16658C2.23998 6.32077 1.89283 7.70665 2.02889 9.0881C2.16495 10.4695 2.7758 11.7611 3.75736 12.7426' stroke='%23009E0F' stroke-linecap='round'/%3e%3cpath d='M10.667 7.16699L8.7357 9.48454C8.08013 10.2712 7.75235 10.6646 7.31177 10.6846C6.8712 10.7045 6.50915 10.3425 5.78505 9.61838L5.33366 9.16699' stroke='%23009E0F' stroke-linecap='round'/%3e%3c/svg%3e "); }
   .report-area .select-col {
-    max-width: 567px;
     width: 100%; }
+    @media (min-width: 1140px) {
+      .report-area .select-col {
+        max-width: 713px; } }
     .report-area .select-col .title {
       font-size: 24px;
       margin-bottom: 8px;
@@ -2144,67 +2171,198 @@ h1 {
           text-align: left; } }
     .report-area .select-col .form-box {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      margin-bottom: 40px; }
       @media (min-width: 768px) {
         .report-area .select-col .form-box {
           flex-direction: row; } }
     .report-area .select-col .input-email {
       border-radius: 32px;
       padding: 13px 24px;
-      border: 1px solid rgba(36, 36, 36, 0.2); }
+      border: 1px solid rgba(36, 36, 36, 0.2);
+      width: 100%;
+      margin-bottom: 12px; }
       @media (min-width: 768px) {
         .report-area .select-col .input-email {
-          margin-right: 8px; } }
+          margin-right: 8px;
+          margin-bottom: 0;
+          max-width: 280px; } }
+    .report-area .select-col .sale-label {
+      border-radius: 16px;
+      color: #fff;
+      background-color: #009E0F;
+      font-size: 16px;
+      padding: 2px 16px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      display: inline-block; }
+    .report-area .select-col .selecting-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 16px; }
+      @media (min-width: 768px) {
+        .report-area .select-col .selecting-box {
+          gap: 12px;
+          margin: 0 0 32px; } }
     .report-area .select-col .pricing-option {
-      margin: 10px 0;
-      border-radius: 10px;
+      margin: 0;
       overflow: hidden;
-      transition: box-shadow 0.3s; }
+      transition: box-shadow 0.3s;
+      width: calc(100% / 2 - 6px); }
+      @media (min-width: 768px) {
+        .report-area .select-col .pricing-option {
+          width: 100%; } }
     .report-area .select-col .pricing-option input[type="radio"] {
       display: none; }
     .report-area .select-col .pricing-option label {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      padding: 20px;
+      padding: 28px 24px;
       background-color: #f8faff;
       border: 1px solid #d4e0ef;
       cursor: pointer;
+      color: #242424;
+      border-radius: 8px;
+      position: relative;
       transition: background-color 0.3s, border-color 0.3s; }
+      @media (min-width: 768px) {
+        .report-area .select-col .pricing-option label {
+          padding: 28px 24px;
+          flex-direction: row; } }
+    .report-area .select-col .name-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      @media (min-width: 768px) {
+        .report-area .select-col .name-box {
+          flex-direction: row; } }
     .report-area .select-col .pricing-option label:hover {
-      background-color: #eef5ff;
+      background-color: #EAF1FF;
       border-color: #b8d0ef; }
+    .report-area .select-col .pricing-option label:before {
+      border: 1px solid #2174FF;
+      order: 1;
+      margin-right: 0;
+      max-width: 16px;
+      height: 16px; }
+      @media (min-width: 768px) {
+        .report-area .select-col .pricing-option label:before {
+          order: 0;
+          margin-right: 20px;
+          max-width: 24px;
+          height: 24px; } }
     .report-area .select-col .pricing-option input[type="radio"]:checked + label {
-      background-color: #eef5ff;
-      border-color: #4a90e2; }
-    .report-area .select-col .pricing-option input[type="radio"]:checked + label .content .title,
-    .report-area .select-col .pricing-option input[type="radio"]:checked + label .content .savings,
-    .report-area .select-col .pricing-option input[type="radio"]:checked + label .content .price {
-      color: #4a90e2;
-      /* Изменение цвета текста в выбранном состоянии */ }
+      background-color: #EAF1FF;
+      border-color: #2174FF; }
     .report-area .select-col .content {
       display: flex;
       justify-content: space-between;
-      width: 100%; }
+      width: 100%;
+      flex-direction: column;
+      order: 0; }
+      @media (min-width: 768px) {
+        .report-area .select-col .content {
+          flex-direction: row;
+          order: 1; } }
     .report-area .select-col .select-title {
       font-weight: bold;
-      font-size: 18px; }
+      font-size: 18px;
+      margin-bottom: 18px; }
+      @media (min-width: 768px) {
+        .report-area .select-col .select-title {
+          margin-bottom: 0; } }
     .report-area .select-col .savings {
-      background-color: #e0ebff;
-      color: #4a90e2;
-      border-radius: 10px;
-      padding: 2px 8px;
-      margin: 0 10px;
-      font-size: 14px; }
+      background-color: #CADDFF;
+      color: #2174FF;
+      border-radius: 16px;
+      padding: 3px 8px;
+      margin: 0 0 24px;
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 500; }
+      @media (min-width: 768px) {
+        .report-area .select-col .savings {
+          font-size: 16px;
+          margin: 0 10px; } }
     .report-area .select-col .price {
-      text-align: right; }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 8px; }
+      @media (min-width: 768px) {
+        .report-area .select-col .price {
+          flex-direction: row;
+          margin-bottom: 0; } }
     .report-area .select-col .old-price {
       text-decoration: line-through;
-      color: #a0a0a0;
-      margin-right: 10px; }
+      color: #616161;
+      font-size: 12px;
+      font-weight: 500; }
+      @media (min-width: 768px) {
+        .report-area .select-col .old-price {
+          font-size: 14px;
+          margin-right: 10px; } }
     .report-area .select-col .new-price {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 24px;
       color: #000; }
+      @media (min-width: 768px) {
+        .report-area .select-col .new-price {
+          font-size: 18px; } }
+  .report-area .final-price-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 16px;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .report-area .final-price-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; } }
+  .report-area .promo-area {
+    border-radius: 32px;
+    border: 1px solid rgba(36, 36, 36, 0.2);
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 16px; }
+    @media (min-width: 768px) {
+      .report-area .promo-area {
+        width: auto;
+        margin-bottom: 0; } }
+    .report-area .promo-area .promo {
+      border: 0;
+      border-radius: 32px;
+      font-size: 16px;
+      color: #242424;
+      padding: 12px 0 12px 24px; }
+      .report-area .promo-area .promo::placeholder {
+        color: rgba(36, 36, 36, 0.2);
+        font-size: 16px; }
+    .report-area .promo-area .btn {
+      border: none; }
+  .report-area .final-price {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .report-area .final-price {
+        width: auto; } }
+    .report-area .final-price span {
+      font-size: 24px;
+      font-weight: 500;
+      margin-left: 20px; }
+      @media (min-width: 768px) {
+        .report-area .final-price span {
+          font-size: 32px; } }
+  .report-area .btn.send {
+    width: 100%; }
 
 .blog .articles {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='611' height='598' viewBox='0 0 611 598' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M163.173 9.01317C74.1019 45.3394 67.9309 162.727 43.3918 255.718C18.9852 348.207 -30.5939 450.979 26.2386 527.929C83.098 604.915 195.948 588.305 291.608 591.796C387.321 595.289 496.208 617.885 561.086 547.446C627.356 475.494 618.074 362.974 588.122 269.862C562.533 190.314 489.314 146.627 418.087 102.905C336.897 53.0684 251.388 -26.9634 163.173 9.01317Z' fill='url(%23paint0_linear_279_2659)' fill-opacity='0.1'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_279_2659' x1='607.682' y1='464.244' x2='255.256' y2='189.675' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%237DF4CD'/%3e%3cstop offset='1' stop-color='%2300A39C'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");

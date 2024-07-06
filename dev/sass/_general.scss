@@ -280,11 +280,32 @@ input[type="radio"] {
 			vertical-align: middle;
 			cursor: pointer;
 			margin-right: 19px;
-			width: 26px;
-			height: 26px;
+			max-width: 24px;
+			width: 100%;
+			height: 24px;
 			background-color: transparent;
 			border: 1px solid $white;
 			border-radius: 2px;
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			width: 8px;
+			height: 8px;
+			background: $primary-color;
+			border-radius: 50%;
+			left: calc(50% - 4px);
+			bottom: 32px;
+			opacity: 0;
+
+			@include media('>=tablet') {
+                width: 16px;
+				height: 16px;
+				bottom: auto;
+				left: 28px;
+				top: 35px;
+            }
 		}
 	}
 }
@@ -296,6 +317,11 @@ input[type="radio"]+label:before {
 input[type="checkbox"]+label:before {
 	background-color: $white;
 }
+
+input[type=radio]:checked+label:after {
+	opacity: 1;
+}
+
 
 input[type=radio]:checked+label:before {
 	border-radius: 50%;
