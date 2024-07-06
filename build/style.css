@@ -1816,11 +1816,15 @@ h1 {
       border-radius: 50%;
       margin: 0 auto 16px;
       background-color: #FAFAFA; }
+      .why .why-list .icon-holder img {
+        max-width: 35px; }
       @media (min-width: 768px) {
         .why .why-list .icon-holder {
           width: 112px;
           height: 112px;
-          margin: 0 auto 32px; } }
+          margin: 0 auto 32px; }
+          .why .why-list .icon-holder img {
+            max-width: 100%; } }
 
 .how-it-works {
   background-color: #FAFAFA;
