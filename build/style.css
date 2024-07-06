@@ -2362,7 +2362,10 @@ h1 {
         .report-area .final-price span {
           font-size: 32px; } }
   .report-area .btn.send {
-    width: 100%; }
+    width: 100%;
+    margin: 0 0 16px; }
+  .report-area .pay-list {
+    display: flex; }
 
 .blog .articles {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='611' height='598' viewBox='0 0 611 598' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M163.173 9.01317C74.1019 45.3394 67.9309 162.727 43.3918 255.718C18.9852 348.207 -30.5939 450.979 26.2386 527.929C83.098 604.915 195.948 588.305 291.608 591.796C387.321 595.289 496.208 617.885 561.086 547.446C627.356 475.494 618.074 362.974 588.122 269.862C562.533 190.314 489.314 146.627 418.087 102.905C336.897 53.0684 251.388 -26.9634 163.173 9.01317Z' fill='url(%23paint0_linear_279_2659)' fill-opacity='0.1'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_279_2659' x1='607.682' y1='464.244' x2='255.256' y2='189.675' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%237DF4CD'/%3e%3cstop offset='1' stop-color='%2300A39C'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
