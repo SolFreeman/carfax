@@ -12,9 +12,13 @@ html {
 
 input {
   font-family: "Roboto", sans-serif;
-  outline: none; }
+  outline: none;
+  border: 1px solid rgba(36, 36, 36, 0.2);
+  border-radius: 32px; }
   input::placeholder {
-    font-family: "Roboto", sans-serif; }
+    font-family: "Roboto", sans-serif;
+    color: rgba(36, 36, 36, 0.2);
+    font-size: 16px; }
 
 body {
   color: #242424;
@@ -1258,7 +1262,8 @@ blockquote {
       .footer .social-list {
         display: flex; } }
     .footer .social-list li {
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
       .footer .social-list li:before {
         display: none; }
       .footer .social-list li a {
@@ -2137,6 +2142,8 @@ h1 {
     @media (min-width: 1140px) {
       .report-area .select-col {
         max-width: 713px; } }
+    .report-area .select-col .title-other-vin {
+      text-align: left !important; }
     .report-area .select-col .title {
       font-size: 24px;
       margin-bottom: 8px;
@@ -2344,14 +2351,73 @@ h1 {
       font-size: 24px;
       font-weight: 500;
       margin-left: 20px; }
-      @media (min-width: 768px) {
+      @media (min-width: 1200px) {
         .report-area .final-price span {
           font-size: 32px; } }
   .report-area .btn.send {
     width: 100%;
     margin: 0 0 16px; }
   .report-area .pay-list {
-    display: flex; }
+    display: flex;
+    margin: 0 0 40px;
+    justify-content: center; }
+    @media (min-width: 768px) {
+      .report-area .pay-list {
+        justify-content: flex-start; } }
+  .report-area .guarantee-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 16px;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .report-area .guarantee-list {
+        flex-direction: row;
+        font-size: 16px;
+        gap: 24px;
+        align-items: flex-start; } }
+    .report-area .guarantee-list .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%; }
+      @media (min-width: 768px) {
+        .report-area .guarantee-list .item {
+          width: calc(100% / 3 - 12px); } }
+    .report-area .guarantee-list .img-holder {
+      margin: 0 0 12px; }
+  .report-area .check-other-box {
+    max-width: 1054px;
+    margin: 65px 0 40px; }
+    @media (min-width: 768px) {
+      .report-area .check-other-box {
+        margin: 0 auto 40px; } }
+    .report-area .check-other-box .title-other-vin {
+      text-align: center;
+      color: #242424;
+      font-size: 24px;
+      margin-bottom: 16px; }
+      @media (min-width: 768px) {
+        .report-area .check-other-box .title-other-vin {
+          margin-bottom: 24px; } }
+  .report-area .check-box {
+    border-radius: 16px;
+    display: flex;
+    box-shadow: 0 0 40px rgba(33, 116, 255, 0.25);
+    padding: 16px 12px; }
+    @media (min-width: 768px) {
+      .report-area .check-box {
+        padding: 24px; } }
+    .report-area .check-box .input_vin {
+      padding: 16px 24px;
+      width: 100%;
+      border-radius: 32px 0 0 32px;
+      border-right: 0;
+      margin-right: -21px; }
+    @media (min-width: 992px) {
+      .report-area .check-box .btn {
+        padding: 13px 64px; } }
 
 .blog .articles {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='611' height='598' viewBox='0 0 611 598' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M163.173 9.01317C74.1019 45.3394 67.9309 162.727 43.3918 255.718C18.9852 348.207 -30.5939 450.979 26.2386 527.929C83.098 604.915 195.948 588.305 291.608 591.796C387.321 595.289 496.208 617.885 561.086 547.446C627.356 475.494 618.074 362.974 588.122 269.862C562.533 190.314 489.314 146.627 418.087 102.905C336.897 53.0684 251.388 -26.9634 163.173 9.01317Z' fill='url(%23paint0_linear_279_2659)' fill-opacity='0.1'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_279_2659' x1='607.682' y1='464.244' x2='255.256' y2='189.675' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%237DF4CD'/%3e%3cstop offset='1' stop-color='%2300A39C'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
