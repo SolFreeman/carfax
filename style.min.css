@@ -962,7 +962,8 @@ input:checked + label:before {
         color: #2174FF;
         transform: rotate(-180deg); } }
   .nav li {
-    position: relative; }
+    position: relative;
+    margin: 0; }
     .nav li:hover > a, .nav li.active > a {
       color: #242424;
       border-color: #2174FF; }
