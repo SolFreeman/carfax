@@ -807,6 +807,17 @@ h1 {
 		padding: 120px 0;
 	}
 
+	h2 {
+
+		br {
+			display: none;
+			
+			@include media('>=tablet') {
+				display: inline-block;
+			}
+		}
+	}
+
 	.info-list {
 		display: flex;
 		align-items: stretch;

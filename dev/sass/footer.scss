@@ -177,11 +177,12 @@
 		a {
 			color: #fff;
 			margin: 0 0 10px;
-
-			&.telegram {
-				margin: 0 0 0 -2px;
-			}
 		}
+	}
+
+	.telegram {
+		margin: 0 0 0 -2px;
+		display: inline-block;
 	}
 
 	.terms_use {
