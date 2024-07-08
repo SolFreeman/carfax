@@ -1301,8 +1301,9 @@ blockquote {
     .footer .mobile-box a {
       color: #fff;
       margin: 0 0 10px; }
-      .footer .mobile-box a.telegram {
-        margin: 0 0 0 -2px; }
+  .footer .telegram {
+    margin: 0 0 0 -2px;
+    display: inline-block; }
   .footer .terms_use {
     font-size: 14px;
     color: rgba(207, 207, 207, 0.6);
@@ -1950,6 +1951,11 @@ h1 {
     .info {
       margin: 0 0 120px;
       padding: 120px 0; } }
+  .info h2 br {
+    display: none; }
+    @media (min-width: 768px) {
+      .info h2 br {
+        display: inline-block; } }
   .info .info-list {
     display: flex;
     align-items: stretch;
@@ -2230,7 +2236,7 @@ h1 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 28px 24px;
+      padding: 28px 15px;
       background-color: #f8faff;
       border: 1px solid #d4e0ef;
       cursor: pointer;
