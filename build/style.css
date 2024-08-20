@@ -388,9 +388,11 @@ input:checked + label:before {
   background-color: #ADC9FC;
   cursor: pointer; }
 
-::-webkit-scrollbar-button {
+.scroll::-webkit-scrollbar-button {
   background-color: transparent;
-  display: none; }
+  display: none;
+  width: 0;
+  height: 0; }
 
 /* IE */
 .scroll {
@@ -400,7 +402,6 @@ input:checked + label:before {
 
 /* FireFox */
 .scroll {
-  scrollbar-color: #33535F #DFDCDC;
   padding-right: 15px; }
 
 .scroll {

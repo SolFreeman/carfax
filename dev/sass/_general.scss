@@ -21,7 +21,7 @@ input {
 
 	&::placeholder {
 		font-family: $font-primary;
-		color: rgba(36,36,36,.2);
+		color: rgba(36, 36, 36, .2);
 		font-size: 16px;
 	}
 }
@@ -304,12 +304,12 @@ input[type="radio"] {
 			opacity: 0;
 
 			@include media('>=tablet') {
-                width: 16px;
+				width: 16px;
 				height: 16px;
 				bottom: auto;
 				left: 28px;
 				top: 35px;
-            }
+			}
 		}
 	}
 }
@@ -471,9 +471,11 @@ input:checked+label {
 	cursor: pointer;
 }
 
-::-webkit-scrollbar-button {
+.scroll::-webkit-scrollbar-button {
 	background-color: transparent;
 	display: none;
+    width: 0;
+    height: 0;
 }
 
 /* IE */
@@ -485,7 +487,8 @@ input:checked+label {
 
 /* FireFox */
 .scroll {
-	scrollbar-color: $secondary-color #DFDCDC;
+	// scrollbar-color: #2174FF #ADC9FC;
+	// scrollbar-width: thin;
 	padding-right: 15px
 }
 
