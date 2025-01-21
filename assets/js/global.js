@@ -52,8 +52,8 @@ jQuery(document).ready(function ($) {
 			nav.text($lang);
 			nav.trigger('click');
 	
-			event.preventDefault();
-			event.stopPropagation(); // Останавливаем всплытие события, чтобы не сработал обработчик для документа
+			//event.preventDefault();
+			//event.stopPropagation(); // Останавливаем всплытие события, чтобы не сработал обработчик для документа
 		});
 	
 		$(document).click(function () {
@@ -104,7 +104,8 @@ jQuery(document).ready(function ($) {
 			},
 		]
 	});
-
+	
+	/**
 	document.getElementById('copyButton').addEventListener('click', function() {
 		var textField = document.getElementById('textField');
 		navigator.clipboard.writeText(textField.value).then(function() {
@@ -113,7 +114,13 @@ jQuery(document).ready(function ($) {
 			console.error('Ошибка копирования: ', err);
 		});
 	});
-
+	**/
+	
+	$('.pricing-option label').click(function() {       
+        var this_price = $(this).data('price');		
+		$('.final-price span').text(this_price);
+    });
+	
 	$('.tablist a').click(function(event) {
         event.preventDefault(); 
         $('.tablist a').removeClass('active'); 
@@ -130,18 +137,35 @@ jQuery(document).ready(function ($) {
         $('.step_1').show();
     });
 
+	openAccountNav();
+
+	document.querySelectorAll('.toggle-password').forEach(button => {
+		button.addEventListener('click', () => {
+		  const input = button.previousElementSibling; // находим соседний input
+		  
+		  // Переключаем тип поля
+		  if (input.type === 'password') {
+			input.type = 'text';
+			button.classList.add('visible'); // Добавляем класс
+		  } else {
+			input.type = 'password';
+			button.classList.remove('visible'); // Убираем класс
+		  }
+		});
+	});
+
 });
 
 function faqAccordeon() {
-	var allLi = jQuery('.faq-list li'),
+	var allLi = jQuery('.faq-list li, .edit-list .item'),
 		allSub = allLi.children('.filter');
 
-	jQuery('.faq-list li > span').each(function () {
+	jQuery('.faq-list li > span, .edit-list .open-title').each(function () {
 		var doc = jQuery(document),
 			$this = jQuery(this),
-			item = $this.parent('li'),
-			itemFilter = $this.next('.text-faq'),
-			itemParent = item.parents('li');
+			item = $this.parent('li, .item'),
+			itemFilter = $this.next('.text-faq, .edit_js'),
+			itemParent = item.parents('li, .item');
 
 
 		$this.on('click', function () {
@@ -151,10 +175,34 @@ function faqAccordeon() {
 			}
 			else {
 				allLi.not(itemParent).removeClass('active');
-				allLi.not(itemParent).find('.text-faq').slideUp();
+				allLi.not(itemParent).find('.text-faq, .edit_js').slideUp();
 				itemFilter.slideDown();
 				item.addClass('active');
 			}
 		});
+	});
+}
+
+function openAccountNav() {
+	var nav = $('.btn-box');
+	var selection = $('.account-list');
+
+	nav.click(function (event) {
+		if (nav.hasClass('active')) {
+			nav.removeClass('active');
+			selection.stop().slideUp(200);
+		} else {
+			nav.addClass('active');
+			selection.stop().slideDown(200);
+		}
+		// event.preventDefault();
+		event.stopPropagation(); // Останавливаем всплытие события, чтобы не сработал обработчик для документа
+	});
+
+	$(document).click(function () {
+		if (nav.hasClass('active')) {
+			nav.removeClass('active');
+			selection.stop().slideUp(200);
+		}
 	});
 }
