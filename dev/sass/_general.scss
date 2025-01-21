@@ -1,16 +1,22 @@
+span.report-status.color-red {
+	color: red;
+}
+
+body .otgs-development-site-front-end {
+	display: none;
+}
+
 html {
 	scroll-behavior: smooth;
 }
 
 .wrapper {
-	overflow: hidden;
+	// overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	position: relative;
 	background: #fff;
-
-
 }
 
 input {
@@ -103,7 +109,7 @@ img {
 /*3*/
 
 ol {
-	margin: 0 0 0 16px;
+	margin: 0 0 0 18px;
 	padding: 0;
 	// counter-reset: li;
 
@@ -111,8 +117,8 @@ ol {
 		// list-style: none;
 		list-style-position: outside;
 		position: relative;
-		padding-left: 26px;
-		margin-bottom: 18px;
+		padding-left: 0;
+		margin-bottom: 0;
 
 		// &:before {
 		// 	content: counter(li, decimal) ".";
@@ -126,7 +132,7 @@ ol {
 		// }
 
 		&::marker {
-			color: $tertiary-color;
+			color: $color;
 		}
 	}
 }
@@ -139,7 +145,7 @@ ul {
 	padding: 0;
 
 	li {
-		color: $grey;
+		color: $color;
 		padding-left: 14px;
 		margin: 0 0 0 10px;
 		position: relative;
@@ -147,7 +153,7 @@ ul {
 		&::before {
 			position: absolute;
 			content: '';
-			background-color: $tertiary-color;
+			background-color: $color;
 			border-radius: 50%;
 			width: 4px;
 			height: 4px;
@@ -156,7 +162,7 @@ ul {
 			display: inline-block;
 
 			@include media('>=1024px') {
-				top: 14px;
+				top: 11px;
 			}
 		}
 	}
@@ -212,41 +218,45 @@ h6,
 .title_4,
 .title_5,
 .title_6 {
-	line-height: 1.5;
-	color: $secondary-color;
+	line-height: 1.2;
+	color: $color;
 	font-weight: 700;
 	font-family: $font-primary;
-	text-align: center;
-	margin: 0 0 35px;
+	text-align: left;
+	margin: 0 0 30px;
 }
 
 h1,
 .title_1 {
-	font-size: 65px;
+	font-size: 36px;
 	margin-bottom: 10px;
 
 	@include media('>=tablet') {
-		font-size: 128px;
+		font-size: 48px;
 	}
 }
 
 h2,
 .title_2 {
-	font-size: 32px;
+	font-size: 30px;
 	margin-bottom: 40px;
 	font-weight: 700;
 	text-align: center;
-	color: #242424;
+	color: $color;
 
 	@include media('>=tablet') {
-		font-size: 48px;
+		font-size: 42px;
 		text-align: left;
 	}
 }
 
 h3,
 .title_3 {
-	font-size: 36px;
+	font-size: 28px;
+
+	@include media('>=tablet') {
+		font-size: 36px;
+	}
 }
 
 h4,
@@ -342,6 +352,9 @@ input:checked+label {
 	}
 }
 
+.wp-block-image {
+	margin-bottom: 16px;
+}
 
 /*10-11*/
 
@@ -373,7 +386,7 @@ input:checked+label {
 
 	@include media('>=992px') {
 		font-size: 16px;
-		padding: 13px 26px;
+		padding: 11px 26px;
 	}
 }
 
@@ -401,22 +414,27 @@ input:checked+label {
 }
 
 .btn-success {
-	color: $primary-color;
+	color: $color;
 	background-color: transparent;
+	border: 1px solid $green;
+	gap: 5px;
 
 	&:hover {
-		background-color: $secondary-color;
-		border-color: $secondary-color;
+		background-color: $green;
+		color: $white;
+		border-color: $green;
 	}
 }
 
 .btn-danger {
-	color: #fff;
+	color: $color;
 	background-color: transparent;
+	border: 1px solid $red;
+	gap: 5px;
 
 	&:hover {
-		color: #0c0c0c;
-		background-color: #fff;
+		color: #fff;
+		background-color: $red;
 	}
 }
 
@@ -429,6 +447,39 @@ input:checked+label {
 		background-color: $secondary-color;
 	}
 }
+
+.btn-link {
+	color: $black;
+	background-color: #E2E2E2;
+
+	&:hover {
+		color: #fff;
+		background-color: $secondary-color;
+	}
+}
+
+.btn-link {
+	color: $black;
+	background-color: #E2E2E2;
+
+	&:hover {
+		color: #fff;
+		background-color: $secondary-color;
+	}
+}
+
+.btn-green {
+	color: $white;
+	background-color: #009E10;
+	padding: 10px 26px;
+	border: 1px solid #009E10;
+
+	&:hover {
+		color: #009E10;
+		background-color: $white;
+	}
+}
+
 
 /*12*/
 /*13*/
@@ -471,17 +522,15 @@ input:checked+label {
 	cursor: pointer;
 }
 
-.scroll::-webkit-scrollbar-button {
+::-webkit-scrollbar-button {
 	background-color: transparent;
 	display: none;
-    width: 0;
-    height: 0;
 }
 
 /* IE */
 .scroll {
-	scrollbar-face-color: $secondary-color;
-	scrollbar-shadow-color: #DFDCDC;
+	/*scrollbar-face-color: $secondary-color;
+	scrollbar-shadow-color: #DFDCDC;*/
 	scrollbar-highlight-color: #DFDCDC;
 }
 

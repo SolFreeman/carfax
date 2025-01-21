@@ -1,9 +1,14 @@
 .header {
-	padding: 30px 0;
+	padding: 3px 0;
+	height: 45px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
 	background-color: #FAFAFA;
 
 	@include media('>=tablet') {
-		
+		padding: 4px 0 5px;
+		height: auto;
 	}
 
 	.container {
@@ -50,18 +55,21 @@
 	max-width: 142px;
 
 	@include media('>=tablet') {
-		max-width: 232px;	
+		max-width: 232px;
 	}
 }
 
 .language-bar {
 	position: relative;
-	margin-right: 32px;
+
+	@include media('>=992px') {
+		margin-left: 32px;
+	}
 }
 
 .language-title {
 	color: $color;
-	line-height: 26px;
+	line-height: 1.5;
 	font-weight: 500;
 	font-size: 16px;
 	padding: 0;
@@ -69,10 +77,8 @@
 	cursor: pointer;
 	position: relative;
 
-	@include media('>=tablet') {
-		
-	}
-	
+	@include media('>=tablet') {}
+
 	&:after {
 		position: absolute;
 		content: '';
@@ -144,6 +150,7 @@
 	width: 100%;
 	font-size: 16px;
 	transition: all .2s ease-in-out;
+	margin: 0 0 50px;
 
 	@include media('>=992px') {
 		text-align: center;
@@ -158,6 +165,7 @@
 		align-items: center;
 		opacity: 1;
 		visibility: visible;
+		margin: 0;
 	}
 
 	&__list {
@@ -168,7 +176,7 @@
 	}
 
 	&__item {
-		margin:0 0 18px !important;
+		margin: 0 0 18px !important;
 		padding-left: 0;
 
 		@include media('>=992px') {
@@ -227,7 +235,7 @@
 
 		&:hover,
 		&.active {
-			& > a {
+			&>a {
 				color: $color;
 				border-color: $primary-color;
 			}
@@ -244,6 +252,7 @@
 		transition: color .2s ease-in-out;
 		border-bottom: 1px solid transparent;
 		text-decoration: none;
+		padding: 0;
 
 		@include media('>=tablet') {
 			font-weight: 500;
@@ -256,10 +265,10 @@
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
-	position: absolute;
-	top: 0;
+	position: fixed;
+	bottom: 0;
 	left: 0;
-	height: 100vh;
+	height: calc(100vh - 45px);
 	transition: all ease-in-out 0.3s;
 	visibility: hidden;
 	opacity: 0;
@@ -267,6 +276,10 @@
 	width: 100%;
 	padding: 34px 15px 50px;
 	overflow-y: auto;
+
+	@include media('>=tablet') {
+		height: calc(100vh - 59px);
+	}
 
 	@include media('>=992px') {
 		justify-content: flex-end;

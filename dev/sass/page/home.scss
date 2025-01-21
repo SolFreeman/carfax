@@ -7,12 +7,13 @@ h1 {
 
 .intro {
 	padding: 36px 0 42px;
-	margin: 0 0 120px;
+	margin: 0 0 60px;
 	background-color: #FAFAFA;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 
 	@include media('>=992px') {
 		padding: 85px 0 42px;
+		margin: 0 0 120px;
 	}
 
 	h1 {
@@ -146,6 +147,11 @@ h1 {
 		.where-win {
 			color: $grey;
 			font-weight: 500;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 
 		@include media('>=tablet') {
@@ -204,7 +210,7 @@ h1 {
 }
 
 .faq {
-	margin: 0 0 140px;
+	margin: 0 0 60px;
 
 	@include media('>=tablet') {
 		margin: 0 0 120px;
@@ -413,6 +419,7 @@ h1 {
 		}
 
 		h3 {
+			text-align: center;
 			font-size: 24px;
 			font-weight: 500;
 			color: #242424;
@@ -559,7 +566,7 @@ h1 {
 }
 
 .why {
-	margin: 0 0 80px;
+	margin: 0 0 60px;
 
 	@include media('>=1024px') {
 		margin: 0 0 120px;
@@ -634,7 +641,7 @@ h1 {
 .how-it-works {
 	background-color: #FAFAFA;
 	padding: 27px 0;
-	margin: 0 0 120px;
+	margin: 0 0 60px;
 
 	@include media('>=tablet') {
 		padding: 120px 0;
@@ -677,13 +684,14 @@ h1 {
 }
 
 .news {
-	margin: 0 0 80px;
+	margin: 0 0 60px;
 
 	@include media('>=tablet') {
 		margin: 0 0 120px;
 	}
 }
 
+.row-news,
 .slider-news {
 	display: flex;
 	align-items: stretch;
@@ -797,8 +805,18 @@ h1 {
 	}
 }
 
+.row-news {
+	gap: 16px;
+	align-items: unset;
+	flex-wrap: wrap;
+
+	.slide {
+		margin: 0;
+	}
+}
+
 .info {
-	margin: 0 0 80px;
+	margin: 0 0 60px;
 	padding: 24px 0;
 	background-color: #FAFAFA;
 

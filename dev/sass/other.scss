@@ -1,0 +1,448 @@
+.general-modal .modal-dialog,
+#mycabinet .modal-dialog {
+    max-width: 575px;
+    margin: 8.75rem auto;
+}
+
+/* tabs on modal */
+.general-modal .modal-header,
+#mycabinet .modal-header {
+    border: none;
+}
+
+.general-modal .modal-body,
+#mycabinet .modal-body {
+    padding: 14px;
+}
+
+
+#mycabinet .tab .nav-tabs {
+    border: none;
+    gap: 24px;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+@media(max-width:768px) {
+    #mycabinet .tab .nav-tabs {
+        justify-content: flex-start;
+    }
+}
+
+#mycabinet .tab .nav-tabs li {
+    margin: 0;
+    padding: 0;
+}
+
+#mycabinet .tab .nav-tabs li a {
+    border: 1px solid rgba(36, 36, 36, .3);
+    display: block;
+    margin: 0;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+#mycabinet .tab .nav-tabs li a:hover,
+#mycabinet .tab .nav-tabs li a.active {
+    border: 1px solid #2174FF;
+    border-bottom: 1px solid #2174FF;
+    color: #2174FF;
+}
+
+#mycabinet .tab .nav-tabs li a.active:before,
+#mycabinet .tab .nav-tabs li a:hover:before {
+    transform: scale(0);
+}
+
+.modal-header .close {
+    font-size: 2.5rem;
+    margin: -1.7rem -1rem -1rem auto;
+}
+
+.modal-title {
+    color: #242424;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#mycabinet label {
+    display: none;
+}
+
+div.wpforms-container-full .wpforms-form textarea,
+.wpforms-field-container input.wpforms-field-medium {
+    padding: 16px 24px;
+    border-radius: 24px !important;
+    height: 48px;
+    max-width: 100% !important;
+    resize: none;
+}
+
+div.wpforms-container-full:not(:empty) {
+    margin: 0 auto !important;
+}
+
+div.wpforms-container-full button {
+    background-color: #2174FF !important;
+    border-radius: 34px !important;
+    font-size: 16px !important;
+    padding: 13px 26px !important;
+    height: auto !important;
+    line-height: 24px !important;
+}
+
+div.wpforms-container-full .wpforms-form textarea::placeholder,
+.wpforms-field-container input.wpforms-field-medium::placeholder,
+input::placeholder {
+    color: rgba(36, 36, 36, .4) !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+#mycabinet .tab .tab-content {
+    padding: 48px 10px 10px;
+}
+
+#mycabinet .modal-header {
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+
+#mycabinet #section1 input[type="submit"] {
+    margin-bottom: 16px;
+}
+
+#mycabinet .btn-primary {
+    padding: 11px 26px;
+    height: 48px;
+}
+
+#mycabinet .btn-secondary {
+    width: 100%;
+    position: relative;
+    background-color: rgba(33, 116, 255, .1);
+    padding: 11px 26px;
+    height: 48px;
+}
+
+#mycabinet .btn-secondary:hover {
+    background-color: #0069d9;
+}
+
+#mycabinet .btn-secondary:before {
+    position: absolute;
+    content: '';
+    left: 5px;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    background-size: cover;
+}
+
+#mycabinet .btn-secondary.google:before {
+    background-image: url("./assets/img/google_icon.svg");
+}
+
+#mycabinet .btn-secondary.facebook:before {
+    background-image: url("./assets/img/facebook_icon.svg");
+}
+
+
+#myrequest .modal-body {
+    padding-bottom: 50px;
+}
+
+.page-post-wrapper .report-area .info-col {
+    max-width: 713px;
+}
+
+.account-area .select-col,
+.page-post-wrapper .report-area .select-col {
+    @include media('>=992px') {
+        max-width: 487px;
+    }
+}
+
+.wp-block-heading {
+    color: #242424;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+
+.account-area .select-col .selecting-box,
+.page-post-wrapper .report-area .select-col .selecting-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 0 16px;
+}
+
+.account-area .select-col .pricing-option,
+.page-post-wrapper .report-area .select-col .pricing-option {
+    margin: 0;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    width: calc(100% / 2 - 6px);
+}
+
+
+.account-area .select-col .pricing-option label,
+.page-post-wrapper .report-area .select-col .pricing-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 15px;
+    background-color: #f8faff;
+    border: 1px solid #d4e0ef;
+    cursor: pointer;
+    color: #242424;
+    border-radius: 8px;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin: 0;
+}
+
+.account-area .select-col .pricing-option input[type="radio"]:checked+label,
+.page-post-wrapper .report-area .select-col .pricing-option input[type="radio"]:checked+label {
+    background-color: #EAF1FF;
+    border-color: #2174FF;
+}
+
+
+.account-area .select-col .pricing-option label:before,
+.page-post-wrapper .report-area .select-col .pricing-option label:before {
+    border: 1px solid #2174FF !important;
+    order: 1;
+    margin-right: 0;
+    max-width: 16px;
+    height: 16px;
+}
+
+.account-area .select-col .content,
+.page-post-wrapper .report-area .select-col .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    order: 0;
+}
+
+.account-area .select-col .name-box,
+.page-post-wrapper .report-area .select-col .name-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-area .select-col .price,
+.page-post-wrapper .report-area .select-col .price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.account-area .select-col .select-title,
+.page-post-wrapper .report-area .select-col .select-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.account-area .select-col .savings,
+.page-post-wrapper .report-area .select-col .savings {
+    background-color: #CADDFF;
+    color: #2174FF;
+    border-radius: 16px;
+    padding: 3px 8px;
+    margin: 0 0 24px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.account-area .select-col .old-price,
+.page-post-wrapper .report-area .select-col .old-price {
+    text-decoration: line-through;
+    color: #616161;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.account-area .select-col .new-price,
+.page-post-wrapper .report-area .select-col .new-price {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+}
+
+.account-area .select-col input[type="radio"]+label:after,
+.page-post-wrapper input[type="radio"]+label:after {
+    left: calc(50% - 4px);
+    bottom: 32px;
+    top: auto;
+    width: 8px;
+    height: 8px;
+}
+
+
+.account-area .select-col .title,
+.page-post-wrapper .report-area .select-col .title {
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.page-post-wrapper .report-area .select-col .label-holder {
+    margin: 0 auto 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-post-wrapper .report-area .select-col .sale-label {
+    margin: 0;
+}
+
+.page-post-wrapper .report-area .select-col .price-line {
+    text-align: center;
+}
+
+.page-post-wrapper .report-area .select-col .form-box {
+    flex-direction: column;
+}
+
+.page-post-wrapper .report-area .select-col .input-email {
+    width: 100%;
+    margin-bottom: 12px;
+    max-width: 100%;
+}
+
+.page-post-wrapper .report-area .final-price-box {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 16px;
+    align-items: center;
+}
+
+.page-post-wrapper .report-area .promo-area {
+    width: 100%;
+    margin: 0 0 20px;
+}
+
+.page-post-wrapper .report-area .final-price {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.page-post-wrapper h1 {
+    text-align: left;
+    color: #242424;
+}
+
+.page-post-wrapper p {
+    font-size: 14px;
+}
+
+.page-post-wrapper .switch-page-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.page-post-wrapper .switch-page-btn-holder:last-child {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.page-post-wrapper .switch-page-btn-holder a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #242424;
+}
+
+.page-post-wrapper .switch-page-btn-holder a:hover {
+    text-decoration: underline;
+}
+
+.page-post-wrapper .switch-page-btn-holder:first-child a:before,
+.page-post-wrapper .switch-page-btn-holder:last-child a:after {
+    content: '';
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 1L1 7L7 13' stroke='%23E0E3EC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 56px;
+    height: 56px;
+    background-color: #2174FF;
+    border-radius: 50%;
+}
+
+.page-post-wrapper .switch-page-btn-holder:last-child a:after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.999999 13L7 7L1 1' stroke='%23E0E3EC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+}
+
+.page-post-wrapper .switch-page-btn-holder a:hover {
+    opacity: .75;
+}
+
+.page-post-wrapper .report-area {
+    padding: 0 0 50px;
+}
+
+@media(min-width: 768px) {
+    .page-post-wrapper .report-area {
+        padding: 0 0 80px;
+    }
+
+    .page-post-wrapper .switch-page-btns {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .page-post-wrapper p {
+        font-size: 18px;
+    }
+}
+
+/* 404 */
+.error-page h1 {
+    color: #242424;
+}
+
+.error-page h1+p {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.error-page .intro {
+    max-width: 487px;
+    margin: 50px auto;
+    background: none;
+    box-shadow: none;
+}
+
+@media(min-width: 768px) {
+    .error-page .intro {
+        margin: 70px auto 80px;
+    }
+
+    .error-page h1+p {
+        font-size: 42px;
+        font-weight: 600;
+    }
+}
+
+/* end 404 */
+
+#myrequest label {
+    width: 100%;
+}
+
+/* .page-post-wrapper .switch-page-btns strong {
+  display: none;
+} */

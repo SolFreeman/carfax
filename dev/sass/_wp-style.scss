@@ -83,6 +83,21 @@ blockquote {
     }
 }
 
+.type-page h1,
+.type-post h1,
+.archive h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .type-page h1,
+    .type-post h1,
+    .archive h1 {
+        font-size: 48px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .post-item {
         .fancybox {
@@ -177,6 +192,7 @@ blockquote {
     }
 
     ul {
+        display: inline-block;
         margin: 20px 0 30px;
     }
 

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Carfax Express</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header registered-user">
+            <div class="container">
+                <div class="logo-box">
+                    <a href="index.html" class="logo">
+				<img src="./assets/img/logo.svg" class="img-fluid" alt="logo">
+			</a>
+                </div>
+
+                <div class="nav-holder">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item active">
+                                <a class="nav-link" href="/VIN.html">Розшифровка VIN</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav-link" href="/prices.html">Ціни</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav-link" href="/gift-card.html">FAQ</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav-link" href="/contact.html">Контакти</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="check">
+                        Перевірок
+                        <div class="check_value">25</div>
+                    </div>
+                    <div class="buttons-right">
+                        <div class="login-box">
+                            <div class="btn-box">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M34 16.983C34 7.6075 26.384 0 17 0C7.616 0 0 7.6075 0 16.983C0 22.1467 2.346 26.8005 6.018 29.9242C6.052 29.9583 6.086 29.9583 6.086 29.9923C6.392 30.2303 6.698 30.4683 7.038 30.7062C7.208 30.8083 7.344 30.9421 7.514 31.0781C10.3234 32.9829 13.6398 34.0008 17.034 34C20.4282 34.0008 23.7446 32.9829 26.554 31.0781C26.724 30.9761 26.86 30.8423 27.03 30.7381C27.336 30.5023 27.676 30.2642 27.982 30.0263C28.016 29.9923 28.05 29.9922 28.05 29.9582C31.654 26.7984 34 22.1467 34 16.983ZM17 31.8601C13.804 31.8601 10.88 30.8401 8.466 29.1423C8.5 28.8702 8.568 28.6004 8.636 28.3284C8.83859 27.5912 9.13573 26.8834 9.52 26.2225C9.894 25.5765 10.336 24.9985 10.88 24.4885C11.39 23.9785 12.002 23.5046 12.614 23.1306C13.26 22.7566 13.94 22.4846 14.688 22.2806C15.4418 22.0774 16.2193 21.9753 17 21.9767C19.3176 21.9603 21.5501 22.8494 23.222 24.4545C24.004 25.2365 24.616 26.1545 25.058 27.2064C25.296 27.8184 25.466 28.4644 25.568 29.1423C23.0588 30.9063 20.0673 31.8553 17 31.8601ZM11.798 16.1351C11.4984 15.4492 11.3478 14.7076 11.356 13.9591C11.356 13.2132 11.492 12.4653 11.798 11.7852C12.104 11.1053 12.512 10.4954 13.022 9.98537C13.532 9.47538 14.144 9.0695 14.824 8.7635C15.504 8.4575 16.252 8.3215 17 8.3215C17.782 8.3215 18.496 8.4575 19.176 8.7635C19.856 9.0695 20.468 9.4775 20.978 9.98537C21.488 10.4954 21.896 11.1074 22.202 11.7852C22.508 12.4653 22.644 13.2132 22.644 13.9591C22.644 14.7411 22.508 15.4551 22.202 16.133C21.9067 16.8029 21.4919 17.4136 20.978 17.935C20.4564 18.4482 19.8458 18.8622 19.176 19.1569C17.771 19.7343 16.195 19.7343 14.79 19.1569C14.1202 18.8622 13.5096 18.4482 12.988 17.935C12.4734 17.4211 12.0685 16.8102 11.798 16.1351ZM27.574 27.4104C27.574 27.3424 27.54 27.3084 27.54 27.2404C27.2056 26.1766 26.7127 25.1694 26.078 24.2526C25.4427 23.3291 24.6619 22.5145 23.766 21.8407C23.0818 21.326 22.3402 20.8925 21.556 20.5487C21.9128 20.3134 22.2433 20.0406 22.542 19.7349C23.0489 19.2344 23.4941 18.6751 23.868 18.0689C24.621 16.8317 25.0099 15.4073 24.99 13.9591C25.0005 12.8871 24.7923 11.8242 24.378 10.8354C23.969 9.88261 23.3803 9.01756 22.644 8.2875C21.9088 7.56507 21.0436 6.98825 20.094 6.5875C19.1035 6.17396 18.0393 5.96645 16.966 5.97762C15.8926 5.96713 14.8283 6.17536 13.838 6.58963C12.8802 6.98952 12.0129 7.57857 11.288 8.3215C10.5656 9.05587 9.98876 9.92039 9.588 10.8694C9.17373 11.8582 8.96548 12.9211 8.976 13.9931C8.976 14.7411 9.078 15.4551 9.282 16.133C9.486 16.847 9.758 17.493 10.132 18.1029C10.472 18.7149 10.948 19.2589 11.458 19.7689C11.764 20.0749 12.104 20.3447 12.478 20.5828C11.6914 20.9356 10.9495 21.3808 10.268 21.9088C9.384 22.5888 8.602 23.4026 7.956 24.2866C7.3148 25.1996 6.82142 26.2079 6.494 27.2744C6.46 27.3424 6.46 27.4104 6.46 27.4444C3.774 24.7265 2.108 21.0588 2.108 16.983C2.108 8.7975 8.806 2.10588 17 2.10588C25.194 2.10588 31.892 8.7975 31.892 16.983C31.8876 20.8929 30.3351 24.642 27.574 27.4104Z" fill="#2174FF" />
+                                </svg>
+                                <a href="#" class="open-login">Увійти</a>
+                            </div>
+                            <ul class="account-list">
+                                <li>
+                                    <img src="./assets/img/personal_account_icon.svg" class="icon" alt="Icon">
+                                    <a href="#">Особистий кабінет</a>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/edit_data_icon.svg" class="icon" alt="logo">
+                                    <a href="#" data-toggle="modal" data-target="#edit_your_info">Змінити особисті дані</a>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/change_pass_icon.svg" class="icon" alt="logo">
+                                    <a href="#">Змінити пароль</a>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/telegram_box_icon.svg" class="icon" alt="logo">
+                                    <a href="#">Телеграм-бот</a>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/exit_icon.svg" class="icon" alt="logo">
+                                    <a href="#">Вийти</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="language-bar">
+                            <div class="language-title">UA</div>
+                            <ul class="language-list">
+                                <li class="menu-item active"><a href="#">UA</a></li>
+                                <li class="menu-item"><a href="#">EN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-holder">
+                    <div class="check mobile">
+                        Перевірок
+                        <div class="check_value">25</div>
+                    </div>
+                    <div class="btn-box mobile">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34 16.983C34 7.6075 26.384 0 17 0C7.616 0 0 7.6075 0 16.983C0 22.1467 2.346 26.8005 6.018 29.9242C6.052 29.9583 6.086 29.9583 6.086 29.9923C6.392 30.2303 6.698 30.4683 7.038 30.7062C7.208 30.8083 7.344 30.9421 7.514 31.0781C10.3234 32.9829 13.6398 34.0008 17.034 34C20.4282 34.0008 23.7446 32.9829 26.554 31.0781C26.724 30.9761 26.86 30.8423 27.03 30.7381C27.336 30.5023 27.676 30.2642 27.982 30.0263C28.016 29.9923 28.05 29.9922 28.05 29.9582C31.654 26.7984 34 22.1467 34 16.983ZM17 31.8601C13.804 31.8601 10.88 30.8401 8.466 29.1423C8.5 28.8702 8.568 28.6004 8.636 28.3284C8.83859 27.5912 9.13573 26.8834 9.52 26.2225C9.894 25.5765 10.336 24.9985 10.88 24.4885C11.39 23.9785 12.002 23.5046 12.614 23.1306C13.26 22.7566 13.94 22.4846 14.688 22.2806C15.4418 22.0774 16.2193 21.9753 17 21.9767C19.3176 21.9603 21.5501 22.8494 23.222 24.4545C24.004 25.2365 24.616 26.1545 25.058 27.2064C25.296 27.8184 25.466 28.4644 25.568 29.1423C23.0588 30.9063 20.0673 31.8553 17 31.8601ZM11.798 16.1351C11.4984 15.4492 11.3478 14.7076 11.356 13.9591C11.356 13.2132 11.492 12.4653 11.798 11.7852C12.104 11.1053 12.512 10.4954 13.022 9.98537C13.532 9.47538 14.144 9.0695 14.824 8.7635C15.504 8.4575 16.252 8.3215 17 8.3215C17.782 8.3215 18.496 8.4575 19.176 8.7635C19.856 9.0695 20.468 9.4775 20.978 9.98537C21.488 10.4954 21.896 11.1074 22.202 11.7852C22.508 12.4653 22.644 13.2132 22.644 13.9591C22.644 14.7411 22.508 15.4551 22.202 16.133C21.9067 16.8029 21.4919 17.4136 20.978 17.935C20.4564 18.4482 19.8458 18.8622 19.176 19.1569C17.771 19.7343 16.195 19.7343 14.79 19.1569C14.1202 18.8622 13.5096 18.4482 12.988 17.935C12.4734 17.4211 12.0685 16.8102 11.798 16.1351ZM27.574 27.4104C27.574 27.3424 27.54 27.3084 27.54 27.2404C27.2056 26.1766 26.7127 25.1694 26.078 24.2526C25.4427 23.3291 24.6619 22.5145 23.766 21.8407C23.0818 21.326 22.3402 20.8925 21.556 20.5487C21.9128 20.3134 22.2433 20.0406 22.542 19.7349C23.0489 19.2344 23.4941 18.6751 23.868 18.0689C24.621 16.8317 25.0099 15.4073 24.99 13.9591C25.0005 12.8871 24.7923 11.8242 24.378 10.8354C23.969 9.88261 23.3803 9.01756 22.644 8.2875C21.9088 7.56507 21.0436 6.98825 20.094 6.5875C19.1035 6.17396 18.0393 5.96645 16.966 5.97762C15.8926 5.96713 14.8283 6.17536 13.838 6.58963C12.8802 6.98952 12.0129 7.57857 11.288 8.3215C10.5656 9.05587 9.98876 9.92039 9.588 10.8694C9.17373 11.8582 8.96548 12.9211 8.976 13.9931C8.976 14.7411 9.078 15.4551 9.282 16.133C9.486 16.847 9.758 17.493 10.132 18.1029C10.472 18.7149 10.948 19.2589 11.458 19.7689C11.764 20.0749 12.104 20.3447 12.478 20.5828C11.6914 20.9356 10.9495 21.3808 10.268 21.9088C9.384 22.5888 8.602 23.4026 7.956 24.2866C7.3148 25.1996 6.82142 26.2079 6.494 27.2744C6.46 27.3424 6.46 27.4104 6.46 27.4444C3.774 24.7265 2.108 21.0588 2.108 16.983C2.108 8.7975 8.806 2.10588 17 2.10588C25.194 2.10588 31.892 8.7975 31.892 16.983C31.8876 20.8929 30.3351 24.642 27.574 27.4104Z" fill="#2174FF" />
+                        </svg>
+                        <a href="#" class="open-login">Увійти</a>
+                    </div>
+                    <button class="nav-opener js-nav-opener">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="report-area account-area">
+                <div class="container">
+                    <div class="two-col">
+                        <div class="tab" role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation">
+                                    <a href="#section1" class="active" aria-controls="home" role="tab"
+									data-toggle="tab">Фінанси</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#section2" aria-controls="profile" role="tab" data-toggle="tab">Звіти</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#section3" aria-controls="messages" role="tab" data-toggle="tab">Акції</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content tabs">
+                                <div role="tabpanel" class="tab-pane active" id="section1">
+                                    <div class="table-container">
+                                        <table class="table" id="scrollTable1">
+                                            <tbody id="finances-table-body">
+                                                <tr>
+                                                    <th>Дата</th>
+                                                    <th>Вид операції</th>
+                                                    <th>Кількість</th>
+                                                    <th style="width: 20%">Сума</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>14/01/2024 14:19</td>
+                                                    <td class="replenishment">Поповнення</td>
+                                                    <td>1</td>
+                                                    <td>890 грн</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>14/01/2024 14:08</td>
+                                                    <td class="replenishment">Поповнення</td>
+                                                    <td>100</td>
+                                                    <td>890 грн</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>25/12/2023 22:02</td>
+                                                    <td class="replenishment">Поповнення</td>
+                                                    <td>1 </td>
+                                                    <td>890 грн</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>25/12/2023 18:08</td>
+                                                    <td class="write-off">Списання</td>
+                                                    <td>1</td>
+                                                    <td>13 грн</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>25/12/2023 13:42</td>
+                                                    <td class="replenishment">Поповнення</td>
+                                                    <td>90 </td>
+                                                    <td>890 грн</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="pagination">
+                                            <a href="#" class="prev_prev"></a>
+                                            <a href="#" class="prev"></a>
+                                            <a href="#" class="current">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <span>...</span>
+                                            <a href="#" class="next"></a>
+                                            <a href="#" class="next_next"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="section2">
+                                    <div class="title-date">Оберіть діапазон:</div>
+                                    <div class="calendar-container menu-tab reports-tab" style="display: flex;">
+                                        <div class="d-none d-md-block"></div>
+                                        <input type="date" name="calendar" id="startDate" value="2024-12-20" min="2024-01-20" max="2025-01-20">
+                                        <input type="date" name="calendar" id="endDate" value="2025-01-20" min="2024-01-20" max="2025-01-20">
+                                    </div>
+                                    <div class="table-account range-scroll menu-tab reports-tab" style="display: block;">
+                                        <div class="table-container">
+                                            <table class="table">
+                                                <tbody id="reports-table-body">
+                                                    <tr>
+                                                        <td>Дата</td>
+                                                        <td>VIN</td>
+                                                        <td>PDF</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="white-space: nowrap;">2025-01-15</td>
+                                                        <td style="white-space: nowrap;"><a
+															href="/result/?vin=1C4PJLLB2MD240496"
+															target="blank">1C4PJLLB2MD240496</a></td>
+                                                        <td style="white-space: nowrap;"><a href="#" class="pdf"></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="pagination">
+                                            <a href="#" class="prev_prev"></a>
+                                            <a href="#" class="prev"></a>
+                                            <a href="#" class="current">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <span>...</span>
+                                            <a href="#" class="next"></a>
+                                            <a href="#" class="next_next"></a>
+                                        </div>
+                                    </div>
+                                    <!-- <form class="form-register" onsubmit="return false;">
+									<div class="form-group">
+										<label for="reg-email"></label>
+										<input class="form-control" id="reg-email" type="email" name="reg-email"
+											autocomplete="email" placeholder="Ваш e-mail">
+									</div>
+									<div class="form-group">
+										<label for="reg-pass"></label>
+										<input class="form-control" id="reg-pass" type="password"
+											autocomplete="new-password" name="reg-pass" placeholder="Пароль">
+									</div>
+									<div class="form-group">
+										<label for="reg-pass2"></label>
+										<input class="form-control" id="reg-pass2" type="password"
+											autocomplete="new-password" name="reg-pass2"
+											placeholder="<?php _e( 'Повторити пароль', THEME_DOMAIN ); ?>">
+									</div>
+									<input type="submit" class="btn btn-primary w-100" id="registerBtn"
+										value="<?php _e( 'Реєстрація', THEME_DOMAIN ); ?>">
+									<span id="infotab2"></span>
+								</form> -->
+                                    <!-- <form class="form-reset-pass" onsubmit="return false;">
+									<div class="form-group">
+										<label for="reset-email"></label>
+										<input class="form-control" id="forgotEmail" type="email" name="reset-email"
+											autocomplete="email" placeholder="Ваш e-mail">
+									</div>
+									<input type="submit" id="recoverPasswordBtn" class="btn btn-primary w-100"
+										value="<?php _e( 'Скинути пароль', THEME_DOMAIN ); ?>">
+									<span id="infotab3"></span>
+								</form> -->
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="section3">
+                                    <div class="table-container">
+                                        <table class="table">
+                                            <tbody id="actions-table-body">
+                                                <tr>
+                                                    <td>Дата</td>
+                                                    <td>Умови акції</td>
+                                                    <td>Статус</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="white-space: nowrap;">2024-01-09</td>
+                                                    <td>Скористайтесь промокодом x=dX1bi%qA*z і отримайте додаткого 5 звітів
+                                                        на пакет з 50 звітів</td>
+                                                    <td style="white-space: nowrap; color: green;">
+                                                        <div class="container"><button class="btn btn-lg btnpc8 btn-success" onclick="toggleActiona('8')">
+                                                                <span id="aactionIcon8" class="fas fa-toggle-on"></span>
+                                                                <span id="aactionText8">Активний</span>
+                                                            </button>&nbsp;&nbsp;
+
+                                                            <button id="adeleteButton8" class="btn btn-lg btnpc8 btn-danger" onclick="promoswitch('actionschangeTab','8','del');loadRecords('actions','backward');">
+                                                                <span class="fas fa-trash-alt" style="padding: 5px;"></span>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="white-space: nowrap;">2024-01-09</td>
+                                                    <td>Скористайтесь промокодом x=dX1bi%qA*z і отримайте додаткого 5 звітів
+                                                        на пакет з 50 звітів</td>
+                                                    <td style="white-space: nowrap; color: green;">
+                                                        <div class="container"><button class="btn btn-lg btnpc7 btn-danger" onclick="toggleActiona('7')">
+                                                                <span id="aactionIcon7" class="fas fa-toggle-off"></span>
+                                                                <span id="aactionText7">Неактивний</span>
+                                                            </button>&nbsp;&nbsp;
+
+                                                            <button id="adeleteButton7" class="btn btn-lg btnpc7 btn-danger" onclick="promoswitch('actionschangeTab','7','del');loadRecords('actions','backward');">
+                                                                <span class="fas fa-trash-alt" style="padding: 5px;"></span>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="white-space: nowrap;">2024-01-09</td>
+                                                    <td>Скористайтесь промокодом x=dX1bi%qA*z і отримайте додаткого 5 звітів
+                                                        на пакет з 50 звітів</td>
+                                                    <td style="white-space: nowrap; color: green;">
+                                                        <div class="container"><button class="btn btn-lg btnpc6 btn-success" onclick="toggleActiona('6')">
+                                                                <span id="aactionIcon6" class="fas fa-toggle-on"></span>
+                                                                <span id="aactionText6">Активний</span>
+                                                            </button>&nbsp;&nbsp;
+
+                                                            <button id="adeleteButton6" class="btn btn-lg btnpc6 btn-danger" onclick="promoswitch('actionschangeTab','6','del');loadRecords('actions','backward');">
+                                                                <span class="fas fa-trash-alt" style="padding: 5px;"></span>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="white-space: nowrap;">2024-01-08</td>
+                                                    <td>Даруємо знижку 15% на любий з пакетів, скористайтесь промокодом
+                                                        <span>CeEFfhe325F</span>
+                                                    </td>
+                                                    <td style="white-space: nowrap; color: green;">
+                                                        <div class="container"><button class="btn btn-lg btnpc3 btn-success" onclick="toggleActiona('3')">
+                                                                <span id="aactionIcon3" class="fas fa-toggle-on"></span>
+                                                                <span id="aactionText3">Активний</span>
+                                                            </button>&nbsp;&nbsp;
+
+                                                            <button id="adeleteButton3" class="btn btn-lg btnpc3 btn-danger" onclick="promoswitch('actionschangeTab','3','del');loadRecords('actions','backward');">
+                                                                <span class="fas fa-trash-alt" style="padding: 5px;"></span>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="white-space: nowrap;">2024-01-08</td>
+                                                    <td>Скористайтесь промокодом <span>mUIuqZKh5kAC</span> і отримайте
+                                                        додатково знижку 10% на пакет з 25 звітів</td>
+                                                    <td style="white-space: nowrap; color: green;">
+                                                        <div class="container"><button class="btn btn-lg btnpc2 btn-success" onclick="toggleActiona('2')">
+                                                                <span id="aactionIcon2" class="fas fa-toggle-on"></span>
+                                                                <span id="aactionText2">Активний</span>
+                                                            </button>&nbsp;&nbsp;
+
+                                                            <button id="adeleteButton2" class="btn btn-lg btnpc2 btn-danger" onclick="promoswitch('actionschangeTab','2','del');loadRecords('actions','backward');">
+                                                                <span class="fas fa-trash-alt" style="padding: 5px;"></span>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-col">
+                            <div class="check-other-box">
+                                <div class="check-box">
+                                    <input type="text" class="input_vin" placeholder="Введіть VIN-номер">
+                                    <button class="btn btn-secondary">Перевірити</button>
+                                </div>
+                            </div>
+
+                            <div class="info-col">
+                                <span class="report-status report-found">Звіт знайдено</span>
+                                <a href="#" class="btn btn-green">Отримати звіт</a>
+                                <div class="car-model">BMW I3</div>
+                                <span class="vin-code">NMTKZ3BXOOR309702</span>
+                                <span class="report-include">
+								Звіт містить <span>11 записів</span>
+                                </span>
+                                <div class="report-info">
+                                    <div class="line">
+                                        <span class="name">Марка:</span>
+                                        <span class="value">BMW</span>
+                                    </div>
+                                    <div class="line">
+                                        <span class="name">Модель:</span>
+                                        <span class="value">13</span>
+                                    </div>
+                                    <div class="line">
+                                        <span class="name">Обрізка:</span>
+                                        <span class="value">13</span>
+                                    </div>
+                                    <div class="line">
+                                        <span class="name">Рік випуску:</span>
+                                        <span class="value">2017</span>
+                                    </div>
+                                    <div class="line">
+                                        <span class="name">Країна виробництва:</span>
+                                        <span class="value">GERMANY</span>
+                                    </div>
+                                    <div class="line">
+                                        <span class="name">Місто виробництва:</span>
+                                        <span class="value">LEIPZIG</span>
+                                    </div>
+                                    <div class="line">
+                                        <span class="name">Тип транспортного засобу:</span>
+                                        <span class="value">Passenger Car</span>
+                                    </div>
+                                    <div class="line">
+                                        <span class="name">Тип Кузова:</span>
+                                        <span class="value">Hatchback/Liftback/Notchback</span>
+                                    </div>
+                                    <div class="line">
+                                        <span class="name">Двері:</span>
+                                        <span class="value">5</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="title">Вигідні пропозиції</div>
+                            <div class="sale-label">Економія до 25%</div>
+                            <div class="selecting-box">
+                                <div class="pricing-option">
+                                    <input type="radio" id="option1" name="pricing" checked>
+                                    <label for="option1">
+                                        <div class="content">
+                                            <div class="name-box">
+                                                <div class="select-title">Один звіт</div>
+                                                <div class="savings">Економія: 50 грн</div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="old-price">120 UAH</span>
+                                                <span class="new-price">75 UAH</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="pricing-option">
+                                    <input type="radio" id="option2" name="pricing">
+                                    <label for="option2">
+                                        <div class="content">
+                                            <div class="name-box">
+                                                <div class="select-title">10 звітів</div>
+                                                <div class="savings">Економія: 50 грн</div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="old-price">120 UAH</span>
+                                                <span class="new-price">75 UAH</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="pricing-option">
+                                    <input type="radio" id="option3" name="pricing">
+                                    <label for="option3">
+                                        <div class="content">
+                                            <div class="name-box">
+                                                <div class="select-title">50 звітів</div>
+                                                <div class="savings">Економія: 50 грн</div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="old-price">120 UAH</span>
+                                                <span class="new-price">75 UAH</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="pricing-option">
+                                    <input type="radio" id="option4" name="pricing">
+                                    <label for="option4">
+                                        <div class="content">
+                                            <div class="name-box">
+                                                <div class="select-title">100 звітів</div>
+                                                <div class="savings">Економія: 50 грн</div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="old-price">120 UAH</span>
+                                                <span class="new-price">75 UAH</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="final-price-box">
+                                <div class="final-price">
+                                    До сплати:
+                                    <span>75.00 UAH</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary send">Придбати зараз</button>
+                            <div class="pay-list">
+                                <img src="./assets/img/visa.svg" alt="visa">
+                                <img src="./assets/img/mastercard.svg" alt="mastercard">
+                                <img src="./assets/img/paypal.svg" alt="paypal">
+                            </div>
+                            <div class="title">Спеціальні умови для оптових замовників</div>
+                            <a href="#" class="btn btn-secondary send-request">Надіслати запит</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal -->
+        <div class="modal fade general-modal" id="edit_your_info" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Змінити особисті дані</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="edit-list">
+                            <div class="item active">
+                                <div class="open-title">Змінити інформацію</div>
+                                <form class="edit_js edit-info">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" id="name" name="name" required="" value="user5">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="tel" id="phone" name="phone" value="+38(555)555-55-56">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" id="telegram" name="telegram" value="@test">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="log-email" type="email" name="log-email" autocomplete="email" placeholder="E-mail">
+                                    </div>
+
+                                    <input type="submit" class="btn btn-primary w-100" id="saveBtn" value="Зберегти">
+                                </form>
+                            </div>
+                            <div class="item">
+                                <div class="open-title">Змінити пароль</div>
+                                <form class="edit_js edit-pass-form">
+                                    <div class="form-group">
+                                        <div class="password-field">
+                                            <input id="pass" type="password" autocomplete="previous-password" name="previous-password" placeholder="Попередній пароль">
+                                            <button type="button" class="toggle-password" aria-label="Показать пароль"></button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="password-field">
+                                            <input id="pass" type="password" autocomplete="new-password" name="new-password" placeholder="Новий пароль">
+                                            <button type="button" class="toggle-password" aria-label="Показать пароль"></button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="password-field">
+                                            <input id="pass" type="password" autocomplete="confirm-password" name="confirm-password" placeholder="Підтвердити пароль">
+                                            <button type="button" class="toggle-password" aria-label="Показать пароль"></button>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary w-100" id="editBtn" value="Змініти пароль">
+                                    <input type="submit" class="btn btn-secondary w-100" id="exitBtn" value="Вийти">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-holder">
+                    <div class="footer-col">
+                        <div class="logo-box">
+                            <a href="index.html" class="logo">
+						<img src="./assets/img/logo.svg" class="img-fluid" alt="logo">
+					</a>
+                        </div>
+                        <ul class="social-list">
+                            <li>
+                                <a href="#" target="_blank">
+							<img src="./assets/img/facebook.svg" alt="facebook">
+						</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+							<img src="./assets/img/x.svg" alt="x">
+						</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+							<img src="./assets/img/linkedin.svg" alt="linkedin">
+						</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+							<img src="./assets/img/instagram.svg" alt="instagram">
+						</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+							<img src="./assets/img/youtube.svg" alt="youtube">
+						</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <div class="title">Підтримка користувачів</div>
+                        <ul class="footer-nav">
+                            <li><a href="#">Контакти</a></li>
+                            <li><a href="#">Про Компанію</a></li>
+                            <li><a href="#">Ціни</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <div class="title">Підтримка користувачів</div>
+                        <ul class="footer-nav">
+                            <li>
+                                <a href="mailto:admin@safe-vin.4kls.com">
+							<img src="./assets/img/envelope.svg" alt="">
+							admin@safe-vin.4kls.com
+						</a>
+                            </li>
+                        </ul>
+
+                        <div class="mobile-box">
+                            <div class="title">Наші проєкти</div>
+                            <a href="#">safe-vin.4kls.com</a>
+                        </div>
+                        <a href="#" class="telegram" target="_blank">
+					<img src="./assets/img/telegram.svg" alt="">
+				</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="title">Дізнавайтеся першими про нові оновлення </div>
+                        <div class="subscribe-form">
+                            <input type="text" class="input-mail" placeholder="Введіть свою пошту">
+                            <button class="btn btn-primary">Підписатися</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-box">
+                <div class="container">
+                    <a class="developers-link" target="_blank" href="#">safe-vin.4kls.com</a>
+                    <ul class="terms-list">
+                        <li><a href="#">Політика конфіденційності</a></li>
+                        <li><a href="#">Договір публічної оферти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="./assets/js/jquery-3.6.0.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script async src="./assets/js/global.js"></script>
+</body>
+
+</html>
+</div>

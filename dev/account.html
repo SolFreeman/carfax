@@ -1,0 +1,467 @@
+@@include('templates/head.html')
+<div class="wrapper">
+	@@include('templates/header.html')
+	<main class="main">
+		<section class="report-area account-area">
+			<div class="container">
+				<div class="two-col">
+					<div class="tab" role="tabpanel">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation">
+								<a href="#section1" class="active" aria-controls="home" role="tab"
+									data-toggle="tab">Фінанси</a>
+							</li>
+							<li role="presentation">
+								<a href="#section2" aria-controls="profile" role="tab" data-toggle="tab">Звіти</a>
+							</li>
+							<li role="presentation">
+								<a href="#section3" aria-controls="messages" role="tab" data-toggle="tab">Акції</a>
+							</li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content tabs">
+							<div role="tabpanel" class="tab-pane active" id="section1">
+								<div class="table-container">
+									<table class="table" id="scrollTable1">
+										<tbody id="finances-table-body">
+											<tr>
+												<th>Дата</th>
+												<th>Вид операції</th>
+												<th>Кількість</th>
+												<th style="width: 20%">Сума</th>
+											</tr>
+											<tr>
+												<td>14/01/2024 14:19</td>
+												<td class="replenishment">Поповнення</td>
+												<td>1</td>
+												<td>890 грн</td>
+											</tr>
+											<tr>
+												<td>14/01/2024 14:08</td>
+												<td class="replenishment">Поповнення</td>
+												<td>100</td>
+												<td>890 грн</td>
+											</tr>
+											<tr>
+												<td>25/12/2023 22:02</td>
+												<td class="replenishment">Поповнення</td>
+												<td>1 </td>
+												<td>890 грн</td>
+											</tr>
+											<tr>
+												<td>25/12/2023 18:08</td>
+												<td class="write-off">Списання</td>
+												<td>1</td>
+												<td>13 грн</td>
+											</tr>
+											<tr>
+												<td>25/12/2023 13:42</td>
+												<td class="replenishment">Поповнення</td>
+												<td>90 </td>
+												<td>890 грн</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="pagination">
+										<a href="#" class="prev_prev"></a>
+										<a href="#" class="prev"></a>
+										<a href="#" class="current">4</a>
+										<a href="#">5</a>
+										<a href="#">6</a>
+										<span>...</span>
+										<a href="#" class="next"></a>
+										<a href="#" class="next_next"></a>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="section2">
+								<div class="title-date">Оберіть діапазон:</div>
+								<div class="calendar-container menu-tab reports-tab" style="display: flex;">
+									<div class="d-none d-md-block"></div>
+									<input type="date" name="calendar" id="startDate" value="2024-12-20"
+										min="2024-01-20" max="2025-01-20">
+									<input type="date" name="calendar" id="endDate" value="2025-01-20" min="2024-01-20"
+										max="2025-01-20">
+								</div>
+								<div class="table-account range-scroll menu-tab reports-tab" style="display: block;">
+									<div class="table-container">
+										<table class="table">
+											<tbody id="reports-table-body">
+												<tr>
+													<td>Дата</td>
+													<td>VIN</td>
+													<td>PDF</td>
+												</tr>
+												<tr>
+													<td style="white-space: nowrap;">2025-01-15</td>
+													<td style="white-space: nowrap;"><a
+															href="/result/?vin=1C4PJLLB2MD240496"
+															target="blank">1C4PJLLB2MD240496</a></td>
+													<td style="white-space: nowrap;"><a href="#" class="pdf"></a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="pagination">
+										<a href="#" class="prev_prev"></a>
+										<a href="#" class="prev"></a>
+										<a href="#" class="current">4</a>
+										<a href="#">5</a>
+										<a href="#">6</a>
+										<span>...</span>
+										<a href="#" class="next"></a>
+										<a href="#" class="next_next"></a>
+									</div>
+								</div>
+								<!-- <form class="form-register" onsubmit="return false;">
+									<div class="form-group">
+										<label for="reg-email"></label>
+										<input class="form-control" id="reg-email" type="email" name="reg-email"
+											autocomplete="email" placeholder="Ваш e-mail">
+									</div>
+									<div class="form-group">
+										<label for="reg-pass"></label>
+										<input class="form-control" id="reg-pass" type="password"
+											autocomplete="new-password" name="reg-pass" placeholder="Пароль">
+									</div>
+									<div class="form-group">
+										<label for="reg-pass2"></label>
+										<input class="form-control" id="reg-pass2" type="password"
+											autocomplete="new-password" name="reg-pass2"
+											placeholder="<?php _e( 'Повторити пароль', THEME_DOMAIN ); ?>">
+									</div>
+									<input type="submit" class="btn btn-primary w-100" id="registerBtn"
+										value="<?php _e( 'Реєстрація', THEME_DOMAIN ); ?>">
+									<span id="infotab2"></span>
+								</form> -->
+								<!-- <form class="form-reset-pass" onsubmit="return false;">
+									<div class="form-group">
+										<label for="reset-email"></label>
+										<input class="form-control" id="forgotEmail" type="email" name="reset-email"
+											autocomplete="email" placeholder="Ваш e-mail">
+									</div>
+									<input type="submit" id="recoverPasswordBtn" class="btn btn-primary w-100"
+										value="<?php _e( 'Скинути пароль', THEME_DOMAIN ); ?>">
+									<span id="infotab3"></span>
+								</form> -->
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="section3">
+								<div class="table-container">
+									<table class="table">
+										<tbody id="actions-table-body">
+											<tr>
+												<td>Дата</td>
+												<td>Умови акції</td>
+												<td>Статус</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">2024-01-09</td>
+												<td>Скористайтесь промокодом x=dX1bi%qA*z і отримайте додаткого 5 звітів
+													на пакет з 50 звітів</td>
+												<td style="white-space: nowrap; color: green;">
+													<div class="container"><button
+															class="btn btn-lg btnpc8 btn-success"
+															onclick="toggleActiona('8')">
+															<span id="aactionIcon8" class="fas fa-toggle-on"></span>
+															<span id="aactionText8">Активний</span>
+														</button>&nbsp;&nbsp;
+
+														<button id="adeleteButton8" class="btn btn-lg btnpc8 btn-danger"
+															onclick="promoswitch('actionschangeTab','8','del');loadRecords('actions','backward');">
+															<span class="fas fa-trash-alt" style="padding: 5px;"></span>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">2024-01-09</td>
+												<td>Скористайтесь промокодом x=dX1bi%qA*z і отримайте додаткого 5 звітів
+													на пакет з 50 звітів</td>
+												<td style="white-space: nowrap; color: green;">
+													<div class="container"><button
+															class="btn btn-lg btnpc7 btn-danger"
+															onclick="toggleActiona('7')">
+															<span id="aactionIcon7" class="fas fa-toggle-off"></span>
+															<span id="aactionText7">Неактивний</span>
+														</button>&nbsp;&nbsp;
+
+														<button id="adeleteButton7" class="btn btn-lg btnpc7 btn-danger"
+															onclick="promoswitch('actionschangeTab','7','del');loadRecords('actions','backward');">
+															<span class="fas fa-trash-alt" style="padding: 5px;"></span>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">2024-01-09</td>
+												<td>Скористайтесь промокодом x=dX1bi%qA*z і отримайте додаткого 5 звітів
+													на пакет з 50 звітів</td>
+												<td style="white-space: nowrap; color: green;">
+													<div class="container"><button
+															class="btn btn-lg btnpc6 btn-success"
+															onclick="toggleActiona('6')">
+															<span id="aactionIcon6" class="fas fa-toggle-on"></span>
+															<span id="aactionText6">Активний</span>
+														</button>&nbsp;&nbsp;
+
+														<button id="adeleteButton6" class="btn btn-lg btnpc6 btn-danger"
+															onclick="promoswitch('actionschangeTab','6','del');loadRecords('actions','backward');">
+															<span class="fas fa-trash-alt" style="padding: 5px;"></span>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">2024-01-08</td>
+												<td>Даруємо знижку 15% на любий з пакетів, скористайтесь промокодом
+													<span>CeEFfhe325F</span></td>
+												<td style="white-space: nowrap; color: green;">
+													<div class="container"><button
+															class="btn btn-lg btnpc3 btn-success"
+															onclick="toggleActiona('3')">
+															<span id="aactionIcon3" class="fas fa-toggle-on"></span>
+															<span id="aactionText3">Активний</span>
+														</button>&nbsp;&nbsp;
+
+														<button id="adeleteButton3" class="btn btn-lg btnpc3 btn-danger"
+															onclick="promoswitch('actionschangeTab','3','del');loadRecords('actions','backward');">
+															<span class="fas fa-trash-alt" style="padding: 5px;"></span>
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">2024-01-08</td>
+												<td>Скористайтесь промокодом <span>mUIuqZKh5kAC</span> і отримайте
+													додатково знижку 10% на пакет з 25 звітів</td>
+												<td style="white-space: nowrap; color: green;">
+													<div class="container"><button
+															class="btn btn-lg btnpc2 btn-success"
+															onclick="toggleActiona('2')">
+															<span id="aactionIcon2" class="fas fa-toggle-on"></span>
+															<span id="aactionText2">Активний</span>
+														</button>&nbsp;&nbsp;
+
+														<button id="adeleteButton2" class="btn btn-lg btnpc2 btn-danger"
+															onclick="promoswitch('actionschangeTab','2','del');loadRecords('actions','backward');">
+															<span class="fas fa-trash-alt" style="padding: 5px;"></span>
+														</button>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="select-col">
+						<div class="check-other-box">
+							<div class="check-box">
+								<input type="text" class="input_vin" placeholder="Введіть VIN-номер">
+								<button class="btn btn-secondary">Перевірити</button>
+							</div>
+						</div>
+
+						<div class="info-col">
+							<span class="report-status report-found">Звіт знайдено</span>
+							<a href="#" class="btn btn-green">Отримати звіт</a>
+							<div class="car-model">BMW I3</div>
+							<span class="vin-code">NMTKZ3BXOOR309702</span>
+							<span class="report-include">
+								Звіт містить <span>11 записів</span>
+							</span>
+							<div class="report-info">
+								<div class="line">
+									<span class="name">Марка:</span>
+									<span class="value">BMW</span>
+								</div>
+								<div class="line">
+									<span class="name">Модель:</span>
+									<span class="value">13</span>
+								</div>
+								<div class="line">
+									<span class="name">Обрізка:</span>
+									<span class="value">13</span>
+								</div>
+								<div class="line">
+									<span class="name">Рік випуску:</span>
+									<span class="value">2017</span>
+								</div>
+								<div class="line">
+									<span class="name">Країна виробництва:</span>
+									<span class="value">GERMANY</span>
+								</div>
+								<div class="line">
+									<span class="name">Місто виробництва:</span>
+									<span class="value">LEIPZIG</span>
+								</div>
+								<div class="line">
+									<span class="name">Тип транспортного засобу:</span>
+									<span class="value">Passenger Car</span>
+								</div>
+								<div class="line">
+									<span class="name">Тип Кузова:</span>
+									<span class="value">Hatchback/Liftback/Notchback</span>
+								</div>
+								<div class="line">
+									<span class="name">Двері:</span>
+									<span class="value">5</span>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="title">Вигідні пропозиції</div>
+						<div class="sale-label">Економія до 25%</div>
+						<div class="selecting-box">
+							<div class="pricing-option">
+								<input type="radio" id="option1" name="pricing" checked>
+								<label for="option1">
+									<div class="content">
+										<div class="name-box">
+											<div class="select-title">Один звіт</div>
+											<div class="savings">Економія: 50 грн</div>
+										</div>
+										<div class="price">
+											<span class="old-price">120 UAH</span>
+											<span class="new-price">75 UAH</span>
+										</div>
+									</div>
+								</label>
+							</div>
+
+							<div class="pricing-option">
+								<input type="radio" id="option2" name="pricing">
+								<label for="option2">
+									<div class="content">
+										<div class="name-box">
+											<div class="select-title">10 звітів</div>
+											<div class="savings">Економія: 50 грн</div>
+										</div>
+										<div class="price">
+											<span class="old-price">120 UAH</span>
+											<span class="new-price">75 UAH</span>
+										</div>
+									</div>
+								</label>
+							</div>
+
+							<div class="pricing-option">
+								<input type="radio" id="option3" name="pricing">
+								<label for="option3">
+									<div class="content">
+										<div class="name-box">
+											<div class="select-title">50 звітів</div>
+											<div class="savings">Економія: 50 грн</div>
+										</div>
+										<div class="price">
+											<span class="old-price">120 UAH</span>
+											<span class="new-price">75 UAH</span>
+										</div>
+									</div>
+								</label>
+							</div>
+
+							<div class="pricing-option">
+								<input type="radio" id="option4" name="pricing">
+								<label for="option4">
+									<div class="content">
+										<div class="name-box">
+											<div class="select-title">100 звітів</div>
+											<div class="savings">Економія: 50 грн</div>
+										</div>
+										<div class="price">
+											<span class="old-price">120 UAH</span>
+											<span class="new-price">75 UAH</span>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="final-price-box">
+							<div class="final-price">
+								До сплати:
+								<span>75.00 UAH</span>
+							</div>
+						</div>
+
+						<button class="btn btn-primary send">Придбати зараз</button>
+						<div class="pay-list">
+							<img src="./assets/img/visa.svg" alt="visa">
+							<img src="./assets/img/mastercard.svg" alt="mastercard">
+							<img src="./assets/img/paypal.svg" alt="paypal">
+						</div>
+						<div class="title">Спеціальні умови для оптових замовників</div>
+						<a href="#" class="btn btn-secondary send-request">Надіслати запит</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Modal -->
+	<div class="modal fade general-modal" id="edit_your_info" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Змінити особисті дані</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="edit-list">
+						<div class="item active">
+							<div class="open-title">Змінити інформацію</div>
+							<form class="edit_js edit-info">
+								<div class="form-group">
+									<input class="form-control" type="text" id="name" name="name" required="" value="user5">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="tel" id="phone" name="phone" value="+38(555)555-55-56">
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" id="telegram" name="telegram" value="@test">
+								</div>
+								<div class="form-group">
+									<input class="form-control" id="log-email" type="email" name="log-email" autocomplete="email" placeholder="E-mail">
+								</div>
+							
+								<input type="submit" class="btn btn-primary w-100" id="saveBtn" value="Зберегти">
+							</form>
+						</div>
+						<div class="item">
+							<div class="open-title">Змінити пароль</div>
+							<form class="edit_js edit-pass-form">
+								<div class="form-group">
+									<div class="password-field">
+										<input id="pass" type="password" autocomplete="previous-password" name="previous-password" placeholder="Попередній пароль">
+										<button type="button" class="toggle-password" aria-label="Показать пароль"></button>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="password-field">
+										<input id="pass" type="password" autocomplete="new-password" name="new-password" placeholder="Новий пароль">
+										<button type="button" class="toggle-password" aria-label="Показать пароль"></button>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="password-field">
+										<input id="pass" type="password" autocomplete="confirm-password" name="confirm-password" placeholder="Підтвердити пароль">
+										<button type="button" class="toggle-password" aria-label="Показать пароль"></button>
+									</div>
+								</div>
+								<input type="submit" class="btn btn-primary w-100" id="editBtn" value="Змініти пароль">
+								<input type="submit" class="btn btn-secondary w-100" id="exitBtn" value="Вийти">
+							</form>
+						</div>
+					</div>
+				</div>   
+			</div>
+		</div>
+	</div>
+	@@include('templates/footer.html')
+</div>
