@@ -257,6 +257,10 @@
 		@include media('>=tablet') {
 			font-weight: 500;
 		}
+
+		@include media('>=992px') {
+			padding: 8px 16px;
+		}
 	}
 }
 

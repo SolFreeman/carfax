@@ -1028,6 +1028,9 @@ input:checked + label:before {
     @media (min-width: 768px) {
       .nav a {
         font-weight: 500; } }
+    @media (min-width: 992px) {
+      .nav a {
+        padding: 8px 16px; } }
 
 .nav-holder {
   display: flex;
@@ -3020,6 +3023,12 @@ input::placeholder {
   align-items: center;
   justify-content: center; }
 
+.mobile_title {
+  display: none;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 15px; }
+
 .registered-user .open-login {
   display: none; }
 
@@ -3070,6 +3079,12 @@ input::placeholder {
     .registered-user .account-list {
       display: none; } }
 
+.registered-user .mobile_title {
+  display: block; }
+  @media (min-width: 992px) {
+    .registered-user .mobile_title {
+      display: none; } }
+
 .check.mobile {
   display: none; }
 
@@ -3081,7 +3096,6 @@ input::placeholder {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #fff;
   display: none; }
   .account-list li {
     display: flex;
@@ -3112,7 +3126,8 @@ input::placeholder {
       border-radius: 15px;
       padding: 31px;
       width: 317px;
-      display: none; }
+      display: none;
+      background-color: #fff; }
       .account-list .icon {
         display: block; } }
 
@@ -3140,6 +3155,11 @@ input::placeholder {
         max-width: 648px; } }
   .account-area .select-col {
     text-align: center; }
+    .account-area .select-col .check-other-box {
+      display: none; }
+      @media (min-width: 992px) {
+        .account-area .select-col .check-other-box {
+          display: block; } }
   .account-area .final-price-box .final-price {
     width: 100%; }
   .account-area .send-request {
@@ -3166,12 +3186,19 @@ input::placeholder {
   .account-area .two-col {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    gap: 50px; }
+    .account-area .two-col > .check-other-box {
+      margin: 0; }
+      @media (min-width: 992px) {
+        .account-area .two-col > .check-other-box {
+          display: none; } }
     @media (min-width: 992px) {
       .account-area .two-col {
         justify-content: space-between;
         flex-direction: row;
-        align-items: flex-start; } }
+        align-items: flex-start;
+        gap: 64px; } }
     @media (min-width: 1100px) {
       .account-area .two-col {
         gap: 120px; } }
@@ -3182,6 +3209,24 @@ input::placeholder {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='26' viewBox='0 0 20 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.77733 25.5625H16.2226C18.6484 25.5625 19.8554 24.332 19.8554 21.8945V11.2539C19.8554 9.7422 19.6914 9.0859 18.7539 8.125L12.2851 1.55075C11.3945 0.6367 10.6679 0.4375 9.34373 0.4375H3.77733C1.36328 0.4375 0.144531 1.6797 0.144531 4.1172V21.8945C0.144531 24.3438 1.36328 25.5625 3.77733 25.5625ZM3.87108 23.6757C2.66403 23.6757 2.03123 23.0312 2.03123 21.8593V4.15235C2.03123 2.9922 2.66403 2.3242 3.88278 2.3242H9.08588V9.1328C9.08588 10.6093 9.83588 11.3359 11.289 11.3359H17.9687V21.8593C17.9687 23.0312 17.3476 23.6757 16.1289 23.6757H3.87108ZM11.5 9.5664C11.0429 9.5664 10.8554 9.3789 10.8554 8.91015V2.6875L17.6054 9.5664H11.5ZM10.9023 13.539C10.9023 13.0586 10.4804 12.6718 9.99998 12.6718C9.51953 12.6718 9.10933 13.0586 9.10933 13.539V17.7929L9.17968 19.7031L8.18358 18.6718L7.12888 17.5937C6.96483 17.4179 6.71873 17.3242 6.50778 17.3242C6.02733 17.3242 5.67573 17.664 5.67573 18.1328C5.67573 18.4023 5.78123 18.6015 5.96873 18.7656L9.34373 21.8711C9.58983 22.0937 9.77733 22.1757 9.99998 22.1757C10.2343 22.1757 10.4101 22.0937 10.6562 21.8711L14.0312 18.7656C14.2187 18.6015 14.3242 18.4023 14.3242 18.1328C14.3242 17.664 13.9726 17.3242 13.5039 17.3242C13.2695 17.3242 13.0468 17.4179 12.8828 17.5937L11.8164 18.6718L10.8203 19.7031L10.9023 17.7929V13.539Z' fill='%23242424'/%3e%3c/svg%3e "); }
     .account-area .pdf:hover {
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='26' viewBox='0 0 20 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.77733 25.5625H16.2226C18.6484 25.5625 19.8554 24.332 19.8554 21.8945V11.2539C19.8554 9.7422 19.6914 9.0859 18.7539 8.125L12.2851 1.55075C11.3945 0.6367 10.6679 0.4375 9.34373 0.4375H3.77733C1.36328 0.4375 0.144531 1.6797 0.144531 4.1172V21.8945C0.144531 24.3438 1.36328 25.5625 3.77733 25.5625ZM3.87108 23.6757C2.66403 23.6757 2.03123 23.0312 2.03123 21.8593V4.15235C2.03123 2.9922 2.66403 2.3242 3.88278 2.3242H9.08588V9.1328C9.08588 10.6093 9.83588 11.3359 11.289 11.3359H17.9687V21.8593C17.9687 23.0312 17.3476 23.6757 16.1289 23.6757H3.87108ZM11.5 9.5664C11.0429 9.5664 10.8554 9.3789 10.8554 8.91015V2.6875L17.6054 9.5664H11.5ZM10.9023 13.539C10.9023 13.0586 10.4804 12.6718 9.99998 12.6718C9.51953 12.6718 9.10933 13.0586 9.10933 13.539V17.7929L9.17968 19.7031L8.18358 18.6718L7.12888 17.5937C6.96483 17.4179 6.71873 17.3242 6.50778 17.3242C6.02733 17.3242 5.67573 17.664 5.67573 18.1328C5.67573 18.4023 5.78123 18.6015 5.96873 18.7656L9.34373 21.8711C9.58983 22.0937 9.77733 22.1757 9.99998 22.1757C10.2343 22.1757 10.4101 22.0937 10.6562 21.8711L14.0312 18.7656C14.2187 18.6015 14.3242 18.4023 14.3242 18.1328C14.3242 17.664 13.9726 17.3242 13.5039 17.3242C13.2695 17.3242 13.0468 17.4179 12.8828 17.5937L11.8164 18.6718L10.8203 19.7031L10.9023 17.7929V13.539Z' fill='%232174FF'/%3e%3c/svg%3e "); }
+  .account-area .tabs .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; }
+    .account-area .tabs .container .btn {
+      display: block;
+      height: 45px; }
+      @media (min-width: 1200px) {
+        .account-area .tabs .container .btn {
+          display: inline-flex;
+          height: 48px; } }
+    @media (min-width: 1200px) {
+      .account-area .tabs .container {
+        flex-direction: row;
+        gap: 5px;
+        justify-content: space-between; } }
 
 /* tabs */
 .tab .nav-tabs {
@@ -3270,6 +3315,28 @@ input::placeholder {
     margin: 0 -10px; }
   .tab .pagination .current {
     color: #2174FF; }
+  .tab .pagination .btn-group {
+    justify-content: space-between;
+    width: 100%; }
+  .tab .pagination .btn {
+    flex: none;
+    position: relative;
+    height: 46px; }
+    .tab .pagination .btn:before, .tab .pagination .btn:after {
+      content: '';
+      left: 0;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #fff;
+      transform: rotate(45deg);
+      border-width: 2px 2px 0 0;
+      transition: all .3s ease-in-out; }
+    .tab .pagination .btn:after {
+      right: 0;
+      left: auto; }
+    .tab .pagination .btn:first-child:before, .tab .pagination .btn:first-child:after {
+      transform: rotate(-135deg); }
 
 .tab .prev,
 .tab .next,

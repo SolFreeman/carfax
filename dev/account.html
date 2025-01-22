@@ -5,6 +5,12 @@
 		<section class="report-area account-area">
 			<div class="container">
 				<div class="two-col">
+					<div class="check-other-box">
+						<div class="check-box">
+							<input type="text" class="input_vin" placeholder="Введіть VIN-номер">
+							<button class="btn btn-secondary">Перевірити</button>
+						</div>
+					</div>
 					<div class="tab" role="tabpanel">
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" role="tablist">
@@ -64,14 +70,20 @@
 										</tbody>
 									</table>
 									<div class="pagination">
-										<a href="#" class="prev_prev"></a>
+										<!-- <a href="#" class="prev_prev"></a>
 										<a href="#" class="prev"></a>
 										<a href="#" class="current">4</a>
 										<a href="#">5</a>
 										<a href="#">6</a>
 										<span>...</span>
 										<a href="#" class="next"></a>
-										<a href="#" class="next_next"></a>
+										<a href="#" class="next_next"></a> -->
+
+										<div class="btn-group">
+											<button class="btn btn-primary" id="actionsbackwardBtn" onclick="loadRecords('actions','backward')"></button>
+											<!-- Add more buttons for different ranges as needed -->
+											<button class="btn btn-primary" id="actionsforwardBtn" onclick="loadRecords('actions','forward')"></button>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -104,47 +116,21 @@
 										</table>
 									</div>
 									<div class="pagination">
-										<a href="#" class="prev_prev"></a>
+										<!-- <a href="#" class="prev_prev"></a>
 										<a href="#" class="prev"></a>
 										<a href="#" class="current">4</a>
 										<a href="#">5</a>
 										<a href="#">6</a>
 										<span>...</span>
 										<a href="#" class="next"></a>
-										<a href="#" class="next_next"></a>
+										<a href="#" class="next_next"></a> -->
+										<div class="btn-group">
+											<button class="btn btn-primary" id="actionsbackwardBtn" onclick="loadRecords('actions','backward')"></button>
+											<!-- Add more buttons for different ranges as needed -->
+											<button class="btn btn-primary" id="actionsforwardBtn" onclick="loadRecords('actions','forward')"></button>
+										</div>
 									</div>
 								</div>
-								<!-- <form class="form-register" onsubmit="return false;">
-									<div class="form-group">
-										<label for="reg-email"></label>
-										<input class="form-control" id="reg-email" type="email" name="reg-email"
-											autocomplete="email" placeholder="Ваш e-mail">
-									</div>
-									<div class="form-group">
-										<label for="reg-pass"></label>
-										<input class="form-control" id="reg-pass" type="password"
-											autocomplete="new-password" name="reg-pass" placeholder="Пароль">
-									</div>
-									<div class="form-group">
-										<label for="reg-pass2"></label>
-										<input class="form-control" id="reg-pass2" type="password"
-											autocomplete="new-password" name="reg-pass2"
-											placeholder="<?php _e( 'Повторити пароль', THEME_DOMAIN ); ?>">
-									</div>
-									<input type="submit" class="btn btn-primary w-100" id="registerBtn"
-										value="<?php _e( 'Реєстрація', THEME_DOMAIN ); ?>">
-									<span id="infotab2"></span>
-								</form> -->
-								<!-- <form class="form-reset-pass" onsubmit="return false;">
-									<div class="form-group">
-										<label for="reset-email"></label>
-										<input class="form-control" id="forgotEmail" type="email" name="reset-email"
-											autocomplete="email" placeholder="Ваш e-mail">
-									</div>
-									<input type="submit" id="recoverPasswordBtn" class="btn btn-primary w-100"
-										value="<?php _e( 'Скинути пароль', THEME_DOMAIN ); ?>">
-									<span id="infotab3"></span>
-								</form> -->
 							</div>
 							<div role="tabpanel" class="tab-pane fade" id="section3">
 								<div class="table-container">
@@ -165,7 +151,7 @@
 															onclick="toggleActiona('8')">
 															<span id="aactionIcon8" class="fas fa-toggle-on"></span>
 															<span id="aactionText8">Активний</span>
-														</button>&nbsp;&nbsp;
+														</button>
 
 														<button id="adeleteButton8" class="btn btn-lg btnpc8 btn-danger"
 															onclick="promoswitch('actionschangeTab','8','del');loadRecords('actions','backward');">
@@ -184,7 +170,7 @@
 															onclick="toggleActiona('7')">
 															<span id="aactionIcon7" class="fas fa-toggle-off"></span>
 															<span id="aactionText7">Неактивний</span>
-														</button>&nbsp;&nbsp;
+														</button>
 
 														<button id="adeleteButton7" class="btn btn-lg btnpc7 btn-danger"
 															onclick="promoswitch('actionschangeTab','7','del');loadRecords('actions','backward');">
@@ -203,7 +189,7 @@
 															onclick="toggleActiona('6')">
 															<span id="aactionIcon6" class="fas fa-toggle-on"></span>
 															<span id="aactionText6">Активний</span>
-														</button>&nbsp;&nbsp;
+														</button>
 
 														<button id="adeleteButton6" class="btn btn-lg btnpc6 btn-danger"
 															onclick="promoswitch('actionschangeTab','6','del');loadRecords('actions','backward');">
@@ -222,7 +208,7 @@
 															onclick="toggleActiona('3')">
 															<span id="aactionIcon3" class="fas fa-toggle-on"></span>
 															<span id="aactionText3">Активний</span>
-														</button>&nbsp;&nbsp;
+														</button>
 
 														<button id="adeleteButton3" class="btn btn-lg btnpc3 btn-danger"
 															onclick="promoswitch('actionschangeTab','3','del');loadRecords('actions','backward');">
@@ -241,7 +227,7 @@
 															onclick="toggleActiona('2')">
 															<span id="aactionIcon2" class="fas fa-toggle-on"></span>
 															<span id="aactionText2">Активний</span>
-														</button>&nbsp;&nbsp;
+														</button>
 
 														<button id="adeleteButton2" class="btn btn-lg btnpc2 btn-danger"
 															onclick="promoswitch('actionschangeTab','2','del');loadRecords('actions','backward');">
@@ -252,6 +238,21 @@
 											</tr>
 										</tbody>
 									</table>
+								</div>
+								<div class="pagination">
+									<!-- <a href="#" class="prev_prev"></a>
+									<a href="#" class="prev"></a>
+									<a href="#" class="current">4</a>
+									<a href="#">5</a>
+									<a href="#">6</a>
+									<span>...</span>
+									<a href="#" class="next"></a>
+									<a href="#" class="next_next"></a> -->
+									<div class="btn-group">
+										<button class="btn btn-primary" id="actionsbackwardBtn" onclick="loadRecords('actions','backward')"></button>
+										<!-- Add more buttons for different ranges as needed -->
+										<button class="btn btn-primary" id="actionsforwardBtn" onclick="loadRecords('actions','forward')"></button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -414,7 +415,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="edit-list">
-						<div class="item active">
+						<div class="item edit_info_item">
 							<div class="open-title">Змінити інформацію</div>
 							<form class="edit_js edit-info">
 								<div class="form-group">
@@ -433,7 +434,7 @@
 								<input type="submit" class="btn btn-primary w-100" id="saveBtn" value="Зберегти">
 							</form>
 						</div>
-						<div class="item">
+						<div class="item edit_pass_item">
 							<div class="open-title">Змінити пароль</div>
 							<form class="edit_js edit-pass-form">
 								<div class="form-group">
@@ -455,7 +456,6 @@
 									</div>
 								</div>
 								<input type="submit" class="btn btn-primary w-100" id="editBtn" value="Змініти пароль">
-								<input type="submit" class="btn btn-secondary w-100" id="exitBtn" value="Вийти">
 							</form>
 						</div>
 					</div>
