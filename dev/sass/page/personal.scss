@@ -489,7 +489,8 @@
         .btn {
             flex: none;
             position: relative;
-            height: 46px;
+            padding: 0;
+            border-radius: 0 !important;
 
             &:before,
             &:after {
@@ -498,7 +499,7 @@
                 top: 0;
                 width: 12px;
                 height: 12px;
-                border: 2px solid $white;
+                border: 2px solid $color;
                 transform: rotate(45deg);
                 border-width: 2px 2px 0 0;
                 transition: all .3s ease-in-out;
