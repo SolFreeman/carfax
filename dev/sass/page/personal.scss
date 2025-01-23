@@ -517,6 +517,15 @@
                     transform: rotate(-135deg);
                 }
             }
+
+            &:hover {
+                opacity: 1;
+
+                &:before,
+                &:after {
+                    border-color: $primary-color;
+                }
+            }
         }
     }
 
