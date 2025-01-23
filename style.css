@@ -3352,6 +3352,10 @@ input::placeholder {
       left: auto; }
     .tab .pagination .btn:first-child:before, .tab .pagination .btn:first-child:after {
       transform: rotate(-135deg); }
+    .tab .pagination .btn:hover {
+      opacity: 1; }
+      .tab .pagination .btn:hover:before, .tab .pagination .btn:hover:after {
+        border-color: #2174FF; }
 
 .tab .prev,
 .tab .next,
